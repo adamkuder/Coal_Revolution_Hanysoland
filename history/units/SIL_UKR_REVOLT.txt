@@ -1,0 +1,314 @@
+division_template = {
+	name = "UPA"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	
+	support = {
+        engineer = { x = 0 y = 0 }
+	}
+}
+units = {
+    division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	V
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "UPA"
+		location = 525
+		division_template = "UPA"
+		start_experience_factor = 0.1
+	}
+	
+    
+}

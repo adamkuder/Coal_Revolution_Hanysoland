@@ -1,0 +1,58 @@
+division_template = {
+	name = "Frele"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 0 y = 3 }
+
+	}
+	
+	support = {
+        artillery = { x = 0 y = 1 }
+	}
+}
+units = {
+    division= {	
+		name = "Frele"
+		location = 9511
+		division_template = "Frele"
+		start_experience_factor = 0.1
+	}
+    division= {	
+		name = "Frele"
+		location = 9511
+		division_template = "Frele"
+		start_experience_factor = 0.1
+	}
+    division= {	
+		name = "Frele"
+		location = 9511
+		division_template = "Frele"
+		start_experience_factor = 0.1
+	}
+    division= {	
+		name = "Frele"
+		location = 9511
+		division_template = "Frele"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "Frele"
+		location = 9511
+		division_template = "Frele"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "Frele"
+		location = 9511
+		division_template = "Frele"
+		start_experience_factor = 0.1
+	}
+}
