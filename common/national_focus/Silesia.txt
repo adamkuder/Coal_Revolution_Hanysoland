@@ -64,7 +64,6 @@ focus_tree = {
 					army_experience = 20
 					navy_experience = 20
 					air_experience = 20
-					add_war_support = 0.2
 					add_tech_bonus = {
 							bonus = 1.0
 							uses = 1
@@ -556,20 +555,20 @@ focus_tree = {
 			completion_reward = {
 					add_popularity = {
 							ideology = neutrality
-							popularity = 0.35
+							popularity = 0.15
 						}
-					set_politics = {
-							ruling_party = neutrality
-						}
+
 					add_stability = 0.05
 					add_war_support = 0.15
 					SIL = {
+						add_ideas = SIL_neutrality_influence
 							add_opinion_modifier = {
 									target = POL
 									modifier = medium_increase
 								}
 						}
 					POL = {
+						add_ideas = SIL_neutrality_influence
 							add_opinion_modifier = {
 									target = SIL
 									modifier = medium_increase
@@ -848,10 +847,37 @@ focus_tree = {
 					add_war_support = 0.2
 					add_popularity = {
 							ideology = fascism
-							popularity = 0.2
+							popularity = 0.1
 						}
 				}
 
+	}
+	focus = {
+	id = Niszczenie_opozycji 
+	icon = GFX_focus_ger_reichskommisariats
+	cost = 5.00
+	prerequisite = {
+		focus = Z_naszym_wodzem
+	}
+	x = 0
+	y = 1
+	relative_position_id = Z_naszym_wodzem
+		completion_reward = {
+				SIL = {
+						add_manpower = 10000
+						add_opinion_modifier = {
+								target = ITA
+								modifier = medium_increase
+							}
+						add_tech_bonus = {
+								name = Bonus_ver_GUT
+								bonus = 1.0
+								uses = 2
+								category = land_doctrine
+							}
+						add_stability = 0.05
+					}
+			}
 	}
 
 	focus = {
@@ -859,11 +885,11 @@ focus_tree = {
 		icon = GFX_goal_molotov_ribbentrop_pact
 		cost = 5.00
 		prerequisite = {
-			focus = Z_naszym_wodzem
+			focus = Niszczenie_opozycji
 		}
 		x = 1
 		y = 1
-		relative_position_id = Z_naszym_wodzem
+		relative_position_id = Niszczenie_opozycji
 			completion_reward = {
 					SIL = {
 							add_opinion_modifier = {
@@ -904,11 +930,11 @@ focus_tree = {
 		icon = GFX_focus_chi_army_reform
 		cost = 5.00
 		prerequisite = {
-			focus = Z_naszym_wodzem
+			focus = Niszczenie_opozycji
 		}
 		x = -1
 		y = 1
-		relative_position_id = Z_naszym_wodzem
+		relative_position_id = Niszczenie_opozycji
 			completion_reward = {
 					SIL = {
 							add_manpower = 10000
@@ -945,6 +971,52 @@ focus_tree = {
 
 	}
 	focus = {
+		id = W_strone_OSI
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = W_strone_Wloch
+		}
+		prerequisite = {
+			focus = W_strone_Wegier
+		}
+		mutually_exclusive = {
+			focus = Trzech_zlych
+		}
+		x = 0
+		y = 1
+		relative_position_id = W_strone_Wegier
+			available = {
+					is_subject = no
+					NOT = {
+							has_war_with = GER
+						}
+					NOT = {
+							is_in_faction_with = ENG
+						}
+					SIL = {
+							is_in_faction = no
+							is_subject = no
+						}
+					GER = {
+							is_in_faction = yes
+							is_subject = no
+						}
+				}
+			available_if_capitulated = no
+			bypass = {
+					is_in_faction = yes
+					is_in_faction_with = GER
+						}
+			completion_reward = {
+					add_political_power = 120
+					GER = {
+							add_to_faction = SIL
+						}
+				}
+
+	}
+	focus = {
 		id = Trzech_zlych
 		icon = GFX_goal_generic_forceful_treaty
 		cost = 10.00
@@ -954,7 +1026,10 @@ focus_tree = {
 		prerequisite = {
 			focus = W_strone_Wegier
 		}
-		x = 1
+		mutually_exclusive = {
+			focus = W_strone_OSI
+		}
+		x = 0
 		y = 1
 		relative_position_id = W_strone_Wloch
 			available = {
@@ -1493,6 +1568,7 @@ focus_tree = {
 		id = Pogodzenie_skluconych
 		icon = GFX_goal_generic_national_unity
 		cost = 10.00
+		available = { date > 1937.1.1}
 		x = 8
 		y = 0
 			completion_reward = {
@@ -1505,6 +1581,7 @@ focus_tree = {
 		id = Uklad_Opolski
 		icon = GFX_goal_rhineland
 		cost = 10.00
+		available = { date > 1938.1.1}
 		prerequisite = {
 		focus = Pogodzenie_skluconych
 		}
@@ -1521,6 +1598,7 @@ focus_tree = {
 		id = Nasz_narod
 		icon = GFX_focus_generic_home_defense
 		cost = 10.00
+		available = { date > 1939.1.1}
 		relative_position_id = Uklad_Opolski
 		prerequisite = {
 			focus = Uklad_Opolski
@@ -2757,7 +2835,7 @@ focus = {
 	y = 1
 	relative_position_id = Zagraniczni_investorzy
 	completion_reward = {
-		add_ideas = FRA_fortification_focus
+		add_war_support = 0.15
 	}
 }
 focus = {
@@ -2812,7 +2890,18 @@ focus = {
 	y = 1
 	relative_position_id = Alianci
 	completion_reward = {
-		add_ideas = SIL_Silna_gospodarka_idea
+		every_other_country = {
+			limit = { is_in_faction_with = ENG }
+			add_war_support = 0.15
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			}
 	}
 }
 focus = {

@@ -525,7 +525,7 @@ country_event = {
 	}
 }
 
-# Event do zaproszenie do frakcji 
+# Event do zaproszenie do frakcji Polski
 country_event = {
 	id = Silesia.6
 	title = Silesia.6.t
@@ -564,7 +564,45 @@ country_event = {
 		ai_chance = { factor = 20 }
 	}
 }
+# Event do zaproszenie do frakcji Czech
+country_event = {
+	id = Silesia.6
+	title = Silesia.6.t
+	desc = Silesia.6.d	
+	is_triggered_only = yes
 
+	option = {
+		name = silesia.6.a
+		ai_chance = { factor = 80 }
+		SIL = {
+		if = {
+			limit = { is_in_faction = no }
+			set_rule = { can_create_factions = yes }
+			create_faction = "Shield_of_Freedom"
+		}
+		}
+		SIL = {	add_to_faction = CZE }
+		CZE = {
+			add_ai_strategy = {
+				type = alliance
+				id = "SIL"
+				value = 200
+			}
+		}
+		SIL = {
+			add_ai_strategy = {
+				type = alliance
+				id = "CZE"
+				value = 200
+			}
+		}
+		
+	}
+	option = {
+		name = silesia.6.b
+		ai_chance = { factor = 20 }
+	}
+}
 
 # Old events 
 #country_event = {
