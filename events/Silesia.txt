@@ -564,15 +564,131 @@ country_event = {
 		ai_chance = { factor = 20 }
 	}
 }
-# Event do zaproszenie do frakcji Czech
+# Event do zaproszenie do frakcji Litwy
 country_event = {
-	id = Silesia.6
-	title = Silesia.6.t
-	desc = Silesia.6.d	
+	id = Silesia.7
+	title = Silesia.7.t
+	desc = Silesia.7.d	
 	is_triggered_only = yes
 
 	option = {
-		name = silesia.6.a
+		name = silesia.7.a
+		ai_chance = { factor = 80 }
+		SIL = {
+		if = {
+			limit = { is_in_faction = no }
+			set_rule = { can_create_factions = yes }
+			create_faction = "Shield_of_Freedom"
+		}
+		}
+		SIL = {	add_to_faction = LIT }
+		LIT = {
+			add_ai_strategy = {
+				type = alliance
+				id = "SIL"
+				value = 200
+			}
+		}
+		SIL = {
+			add_ai_strategy = {
+				type = alliance
+				id = "LIT"
+				value = 200
+			}
+		}
+		
+	}
+	option = {
+		name = silesia.7.b
+		ai_chance = { factor = 20 }
+	}
+}
+# Event do zaproszenie do frakcji Lotwy
+country_event = {
+	id = Silesia.8
+	title = Silesia.8.t
+	desc = Silesia.8.d	
+	is_triggered_only = yes
+
+	option = {
+		name = silesia.8.a
+		ai_chance = { factor = 80 }
+		SIL = {
+		if = {
+			limit = { is_in_faction = no }
+			set_rule = { can_create_factions = yes }
+			create_faction = "Shield_of_Freedom"
+		}
+		}
+		SIL = {	add_to_faction = LAT }
+		LAT = {
+			add_ai_strategy = {
+				type = alliance
+				id = "SIL"
+				value = 200
+			}
+		}
+		SIL = {
+			add_ai_strategy = {
+				type = alliance
+				id = "LAT"
+				value = 200
+			}
+		}
+		
+	}
+	option = {
+		name = silesia.8.b
+		ai_chance = { factor = 20 }
+	}
+}
+# Event do zaproszenie do frakcji Estoni
+country_event = {
+	id = Silesia.9
+	title = Silesia.9.t
+	desc = Silesia.9.d	
+	is_triggered_only = yes
+
+	option = {
+		name = silesia.9.a
+		ai_chance = { factor = 80 }
+		SIL = {
+		if = {
+			limit = { is_in_faction = no }
+			set_rule = { can_create_factions = yes }
+			create_faction = "Shield_of_Freedom"
+		}
+		}
+		SIL = {	add_to_faction = EST }
+		EST = {
+			add_ai_strategy = {
+				type = alliance
+				id = "SIL"
+				value = 200
+			}
+		}
+		SIL = {
+			add_ai_strategy = {
+				type = alliance
+				id = "EST"
+				value = 200
+			}
+		}
+		
+	}
+	option = {
+		name = silesia.9.b
+		ai_chance = { factor = 20 }
+	}
+}
+# Event do zaproszenie do frakcji Czech
+country_event = {
+	id = Silesia.10
+	title = Silesia.10.t
+	desc = Silesia.10.d	
+	is_triggered_only = yes
+	option = {
+		name = silesia.10.a
 		ai_chance = { factor = 80 }
 		SIL = {
 		if = {
@@ -599,7 +715,45 @@ country_event = {
 		
 	}
 	option = {
-		name = silesia.6.b
+		name = silesia.10.b
+		ai_chance = { factor = 20 }
+	}
+}
+
+# Event do zaproszenie do frakcji Rumuni
+country_event = {
+	id = Silesia.11
+	title = Silesia.11.t
+	desc = Silesia.11.d	
+	is_triggered_only = yes
+	option = {
+		name = silesia.11.a
+		ai_chance = { factor = 80 }
+		SIL = {
+		if = {
+			limit = { is_in_faction = no }
+			set_rule = { can_create_factions = yes }
+			create_faction = "Shield_of_Freedom"
+		}
+		}
+		SIL = {	add_to_faction = ROM }
+		ROM = {
+			add_ai_strategy = {
+				type = alliance
+				id = "SIL"
+				value = 200
+			}
+		}
+		SIL = {
+			add_ai_strategy = {
+				type = alliance
+				id = "ROM"
+				value = 200
+			}
+		}
+	}
+	option = {
+		name = silesia.11.b
 		ai_chance = { factor = 20 }
 	}
 }

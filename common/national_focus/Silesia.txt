@@ -2905,6 +2905,154 @@ focus = {
 	}
 }
 focus = {
+	id = Dalszy_Nacisk_na_zbrojenia
+	icon = GFX_focus_generic_support_the_left_right
+	available = {
+	is_subject = no
+	}
+	cost = 10.00
+	prerequisite = {
+		focus = Nacisk_na_zbrojenia
+	}
+	x = 0
+	y = 1
+	relative_position_id = Nacisk_na_zbrojenia
+	completion_reward = {
+		every_other_country = {
+			limit = { is_in_faction_with = ENG }
+			add_war_support = 0.05
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			}
+	}
+}
+focus = {
+	id = Oslabmy_Niemcy
+	icon = GFX_focus_usa_focus_on_europe
+	available = {
+	is_subject = no
+	}
+	cost = 10.00
+	prerequisite = {
+		focus = Alianci
+		focus = Wszech_oborna
+	}
+	x = 1
+	y = 1
+	relative_position_id = Alianci
+	completion_reward = {
+		every_other_country = {
+			limit = { is_in_faction_with = ENG }
+			add_war_support = 0.15
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			}
+	}
+}
+focus = {
+	id = Strefa_wolnosci
+	icon = GFX_focus_research
+	available = {
+	is_subject = no
+	}
+	cost = 10.00
+	prerequisite = {
+		focus = Oslabmy_Niemcy
+	}
+	x = 0
+	y = 1
+	relative_position_id = Oslabmy_Niemcy
+	completion_reward = {
+		every_other_country = {
+			limit = { is_in_faction_with = ENG }
+			add_war_support = 0.15
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			}
+	}
+}
+focus = {
+	id = Przygotowanie_taktyki
+	icon = GFX_focus_ger_oppose_hitler
+	available = {
+	is_subject = no
+	}
+	cost = 10.00
+	prerequisite = {
+		focus = Strefa_wolnosci
+	}
+	x = 0
+	y = 1
+	relative_position_id = Strefa_wolnosci
+	completion_reward = {
+		every_other_country = {
+			limit = { is_in_faction_with = ENG }
+			add_war_support = 0.15
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			}
+	}
+}
+focus = {
+	id = Koniec_zniewolenia
+	icon = GFX_focus_attack_germany
+	available = {
+	is_subject = no
+	}
+	cost = 10.00
+	prerequisite = {
+		focus = Przygotowanie_taktyki
+	}
+	x = 0
+	y = 1
+	relative_position_id = Przygotowanie_taktyki
+	completion_reward = {
+			create_wargoal = {
+			type = take_state_focus
+			target = GER
+			}
+		63 = {
+				add_claim_by = SIL
+			}
+		62 = {
+				add_claim_by = SIL
+			}
+		65 = {
+				add_claim_by = SIL
+			}
+		64 = {
+				add_claim_by = SIL
+			}
+		68 = {
+				add_claim_by = SIL
+			}
+		}
+}
+focus = {
 	id = Wszech_oborna
 	icon = GFX_goal_generic_national_unity
 	available = {
@@ -2944,7 +3092,171 @@ focus = {
 		
 	}
 }
+focus = {
+	id = Nacisk_na_litwe
+	icon = GFX_focus_generic_polish_deal
+	available = {
+	is_subject = no
+	}
+	cost = 10.00
+	mutually_exclusive = {
+	focus = Zaproszenie_Litwy
+	}
+	prerequisite = {
+		focus = Sasiedzi
+	}
+	x = 2
+	y = 1
+	relative_position_id = Sasiedzi
+	completion_reward = {
+		POL = {
+		every_state = {
+				limit = {
+						is_core_of = LIT
+					}
+				add_core_of = SIL
+			}
+		annex_country = {
+				target = LIT
+				transfer_troops = yes
+			}
+		}
+		
+	}
+}
+focus = {
+	id = Zaproszenie_Litwy
+	icon = GFX_focus_generic_polish_deal
+	available = {
+	is_subject = no
+	}
+	cost = 2.00
+	mutually_exclusive = {
+	focus = Nacisk_na_litwe
+	}
+	prerequisite = {
+		focus = Sasiedzi
+	}
+	x = 0
+	y = 1
+	relative_position_id = Sasiedzi
+	completion_reward = {
+		LIT = {
+		country_event = { id = silesia.7 }
+		}
+		
+	}
+}
+focus = {
+	id = Zaproszenie_Lotwy
+	icon = GFX_focus_generic_polish_deal
+	available = {
+	is_subject = no
+	}
+	cost = 2.00
+	prerequisite = {
+		focus = Zaproszenie_Litwy
+	}
+	x = 0
+	y = 1
+	relative_position_id = Zaproszenie_Litwy
+	completion_reward = {
+		LAT = {
+		country_event = { id = silesia.8 }
+		}
+	}
+}
+focus = {
+	id = Zaproszenie_Estoni
+	icon = GFX_focus_generic_polish_deal
+	available = {
+	is_subject = no
+	}
+	cost = 2.00
+	prerequisite = {
+		focus = Zaproszenie_Lotwy
+		focus = Odrodzenie_sie_Rzeczpospolitej_obojga_narodow
+	}
+	x = 0
+	y = 1
+	relative_position_id = Zaproszenie_Lotwy
+	completion_reward = {
+			EST = {
+			country_event = { id = silesia.9 }
+			}
+		
+	}
+}
+focus = {
+	id = Zaproszenie_Czechoslowacji
+	icon = GFX_focus_generic_polish_deal
+	available = {
+	is_subject = no
+	}
+	cost = 4.00
+	prerequisite = {
+		focus = Zaproszenie_Lotwy
+		focus = Odrodzenie_sie_Rzeczpospolitej_obojga_narodow
+	}
+	x = 2
+	y = 1
+	relative_position_id = Zaproszenie_Lotwy
+		completion_reward = {
+		LAT = {
+		country_event = { id = silesia.10 }
+		}
+	}		
+}
+focus = {
+	id = Zaproszenie_Rumuni
+	icon = GFX_focus_generic_polish_deal
+	available = {
+	is_subject = no
+	}
+	cost = 4.00
+	prerequisite = {
+		focus = Zaproszenie_Lotwy
+		focus = Odrodzenie_sie_Rzeczpospolitej_obojga_narodow
+	}
+	x = 4
+	y = 1
+	relative_position_id = Zaproszenie_Lotwy
+	completion_reward = {
+		ROM = {
+		country_event = { id = silesia.11 }
+		}
+}
 
+}
+focus = {
+	id = Odrodzenie_sie_Rzeczpospolitej_obojga_narodow
+	icon = GFX_focus_generic_polish_deal
+	available = {
+	is_subject = no
+	}
+	cost = 10.00
+	prerequisite = {
+		focus = Nacisk_na_litwe
+	}
+	x = 0
+	y = 1
+	relative_position_id = Nacisk_na_litwe
+	completion_reward = {
+		POL = {
+		every_state = {
+				limit = {
+						is_core_of = LAT
+					}
+				add_core_of = SIL
+			}
+		annex_country = {
+				target = LAT
+				transfer_troops = yes
+			}
+		}
+		
+	}
+}
 
 
 
