@@ -692,9 +692,7 @@ focus_tree = {
 					create_corps_commander = {
 							name = "Roman Abraham"
 							gfx = "GFX_POL_roman_abraham"
-							traits = {
-
-}
+							traits = { }
 							skill = 4
 							attack_skill = 3
 							defense_skill = 4
@@ -1017,6 +1015,26 @@ focus_tree = {
 
 	}
 	focus = {
+	id = Tfu_komunisci
+	icon = GFX_focus_RAJ_indian_gurkhas
+	cost = 5.00
+	prerequisite = {
+		focus = Trzech_zlych
+		focus = W_strone_OSI
+	}
+	x = -1
+	y = 1
+	relative_position_id = W_strone_OSI
+	completion_reward = {
+		add_manpower = -2000
+		add_stability = -0.1
+		add_popularity = {
+						ideology = communism
+						popularity = -0.2
+					}
+		}
+	}
+	focus = {
 		id = Trzech_zlych
 		icon = GFX_goal_generic_forceful_treaty
 		cost = 10.00
@@ -1091,7 +1109,20 @@ focus_tree = {
 				}
 
 	}
-
+	focus = {
+		id = Moravia_dla_Slaska 
+		icon = GFX_focus_hol_abandon_the_gold_standard
+		cost = 10.00
+		prerequisite = {
+			focus = W_strone_OSI
+		}
+		relative_position_id = W_strone_OSI
+		x = 1
+		y = 1
+			completion_reward = {
+					#
+				}
+	}
 	focus = {
 		id = Silna_gospodarka
 		icon = GFX_focus_hol_abandon_the_gold_standard
@@ -1105,7 +1136,6 @@ focus_tree = {
 			completion_reward = {
 					add_ideas = SIL_Silna_gospodarka_idea
 				}
-
 	}
 	focus = {
 		id = Karwasz_Twarz_Barabasz
@@ -1117,8 +1147,9 @@ focus_tree = {
 		prerequisite = {
 			focus = Trzech_zlych
 		}
-		x = 18
-		y = 6
+		relative_position_id = Trzech_zlych
+		x = -1
+		y = 1
 			completion_reward = {
 					SLO = {
 							add_state_core = 70
@@ -1152,117 +1183,6 @@ focus_tree = {
 
 	}
 	focus = {
-		id = Miaulowa_zamiec
-		icon = GFX_focus_hol_prepare_the_inundation_lines
-		cost = 5.00
-		prerequisite = {
-			focus = Trzech_zlych
-		}
-		x = 20
-		y = 6
-			completion_reward = {
-					65 = {
-							damage_building = {
-									type = infrastructure
-									damage = 1
-								}
-							damage_building = {
-									type = arms_factory
-									damage = 1
-								}
-							damage_building = {
-									type = industrial_complex
-									damage = 1
-								}
-						}
-					54 = {
-							damage_building = {
-									type = infrastructure
-									damage = 1
-								}
-							damage_building = {
-									type = arms_factory
-									damage = 1
-								}
-							damage_building = {
-									type = industrial_complex
-									damage = 1
-								}
-						}
-					50 = {
-							damage_building = {
-									type = infrastructure
-									damage = 1
-								}
-							damage_building = {
-									type = arms_factory
-									damage = 1
-								}
-							damage_building = {
-									type = industrial_complex
-									damage = 1
-								}
-						}
-					3 = {
-							damage_building = {
-									type = infrastructure
-									damage = 1
-								}
-							damage_building = {
-									type = arms_factory
-									damage = 1
-								}
-							damage_building = {
-									type = industrial_complex
-									damage = 1
-								}
-						}
-					735 = {
-							damage_building = {
-									type = infrastructure
-									damage = 1
-								}
-							damage_building = {
-									type = arms_factory
-									damage = 1
-								}
-							damage_building = {
-									type = industrial_complex
-									damage = 1
-								}
-						}
-					21 = {
-							damage_building = {
-									type = infrastructure
-									damage = 1
-								}
-							damage_building = {
-									type = arms_factory
-									damage = 1
-								}
-							damage_building = {
-									type = industrial_complex
-									damage = 1
-								}
-						}
-					165 = {
-							damage_building = {
-									type = infrastructure
-									damage = 1
-								}
-							damage_building = {
-									type = arms_factory
-									damage = 1
-								}
-							damage_building = {
-									type = industrial_complex
-									damage = 1
-								}
-						}
-				}
-
-	}
-	focus = {
 		id = Wspolna_granica
 		icon = GFX_focus_generic_italy_first
 		cost = 10.00
@@ -1272,8 +1192,9 @@ focus_tree = {
 		prerequisite = {
 			focus = Miaulowa_zamiec
 		}
-		x = 19
-		y = 7
+		relative_position_id = Karwasz_Twarz_Barabasz
+		x = -1
+		y = 1
 			completion_reward = {
 					if = {
 						
@@ -1807,8 +1728,9 @@ focus_tree = {
 		prerequisite = {
 			focus = Wspolna_granica
 		}
-		x = 18
-		y = 8
+		x = -1
+		y = 1
+		relative_position_id = Wspolna_granica
 			completion_reward = {
 					create_wargoal = {
 							type = take_state_focus
@@ -1842,8 +1764,9 @@ focus_tree = {
 		prerequisite = {
 			focus = Wspolna_granica
 		}
-		x = 20
-		y = 8
+		relative_position_id = Wspolna_granica
+		x = 1
+		y = 1
 		completion_reward = {
 					create_wargoal = {
 							type = take_state_focus
@@ -2092,7 +2015,7 @@ focus_tree = {
 			add_manpower = -5000
 			add_stability = -0.1
 		}}
-		focus = {
+	focus = {
 		id = Noc_Maczet
 		icon = GFX_focus_RAJ_indian_gurkhas
 		cost = 5.00
@@ -2117,7 +2040,8 @@ focus_tree = {
 							ideology = democratic
 							popularity = -0.2
 						}
-		}}
+		}
+	}
 	focus = {
 		id = Industria_Soviecka
 		icon = GFX_goal_generic_soviet_construction
@@ -2157,7 +2081,7 @@ focus_tree = {
 	y = 1
 	relative_position_id = Soviecka_Obronnosc
 	completion_reward = {
-		add_ideas = FRA_fortification_focus
+		add_ideas = SIL_research_bonus
 		}
 	}
 
@@ -2933,6 +2857,30 @@ focus = {
 	}
 }
 focus = {
+	id = Przyszlosc_Demokracji
+	icon = GFX_focus_generic_treaty
+	available = {
+	is_subject = no
+	}
+	cost = 5.00
+	prerequisite = {
+		focus = Dalszy_Nacisk_na_zbrojenia
+	}
+	x = 0
+	y = 2
+	relative_position_id = Dalszy_Nacisk_na_zbrojenia
+	completion_reward = {
+		every_other_country = {
+			limit = { is_in_faction_with = ENG }
+			add_stability = 0.02
+					add_popularity = {
+					ideology = democratic
+					popularity = 0.05
+				}
+			}
+	}
+}
+focus = {
 	id = Oslabmy_Niemcy
 	icon = GFX_focus_usa_focus_on_europe
 	available = {
@@ -2947,18 +2895,7 @@ focus = {
 	y = 1
 	relative_position_id = Alianci
 	completion_reward = {
-		every_other_country = {
-			limit = { is_in_faction_with = ENG }
-			add_war_support = 0.15
-			random_owned_controlled_state = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			}
+		GER ={ add_ideas = SIL_Oslabic }
 	}
 }
 focus = {
@@ -2975,18 +2912,7 @@ focus = {
 	y = 1
 	relative_position_id = Oslabmy_Niemcy
 	completion_reward = {
-		every_other_country = {
-			limit = { is_in_faction_with = ENG }
-			add_war_support = 0.15
-			random_owned_controlled_state = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			}
+		add_ideas = SIL_research_bonus
 	}
 }
 focus = {
@@ -3003,18 +2929,7 @@ focus = {
 	y = 1
 	relative_position_id = Strefa_wolnosci
 	completion_reward = {
-		every_other_country = {
-			limit = { is_in_faction_with = ENG }
-			add_war_support = 0.15
-			random_owned_controlled_state = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			}
+		add_ideas = Sil_Target_Ger
 	}
 }
 focus = {
@@ -3052,6 +2967,66 @@ focus = {
 			}
 		}
 }
+focus = {
+	id = Oslabmy_Czerwonych
+	icon = GFX_goal_generic_forceful_treaty
+	available = {
+	is_subject = no
+	}
+	cost = 10.00
+	prerequisite = {
+		focus = Przyszlosc_Demokracji
+		focus = Zaproszenie_Rumuni
+		focus = Zaproszenie_Czechoslowacji
+		focus = Zaproszenie_Estoni
+	}
+	x = 1
+	y = 1
+	relative_position_id = Koniec_zniewolenia
+	completion_reward = {
+		sov ={ add_ideas = SIL_Oslabic }
+	}
+}
+focus = {
+	id = Przygotowanie_taktyki_Sov
+	icon = GFX_focus_ger_bulwark_against_bolshevism
+	available = {
+	is_subject = no
+	}
+	cost = 10.00
+	prerequisite = {
+		focus = Oslabmy_Czerwonych
+	}
+	x = 0
+	y = 1
+	relative_position_id = Oslabmy_Czerwonych
+	completion_reward = {
+		add_ideas = Sil_Target_Sov
+	}
+}
+focus = {
+	id = Koniec_zniewolenia_sov
+	icon = GFX_focus_attack_soviet
+	available = {
+	is_subject = no
+	}
+	cost = 10.00
+	prerequisite = {
+		focus = Przygotowanie_taktyki_Sov
+	}
+	x = 0
+	y = 1
+	relative_position_id = Przygotowanie_taktyki_Sov
+	completion_reward = {
+			create_wargoal = {
+			type = take_state_focus
+			target = SOV
+			}
+		}
+}
+###################
+####ARMY focus#####
+###################
 focus = {
 	id = Wszech_oborna
 	icon = GFX_goal_generic_national_unity
@@ -3094,9 +3069,11 @@ focus = {
 }
 focus = {
 	id = Nacisk_na_litwe
-	icon = GFX_focus_generic_polish_deal
+	icon = GFX_goal_generic_alliance
 	available = {
 	is_subject = no
+	SIL = { is_in_faction_with = POL }
+	
 	}
 	cost = 10.00
 	mutually_exclusive = {
@@ -3114,7 +3091,7 @@ focus = {
 				limit = {
 						is_core_of = LIT
 					}
-				add_core_of = SIL
+				add_core_of = POL
 			}
 		annex_country = {
 				target = LIT
@@ -3126,7 +3103,7 @@ focus = {
 }
 focus = {
 	id = Zaproszenie_Litwy
-	icon = GFX_focus_generic_polish_deal
+	icon = GFX_goal_generic_major_alliance
 	available = {
 	is_subject = no
 	}
@@ -3149,7 +3126,7 @@ focus = {
 }
 focus = {
 	id = Zaproszenie_Lotwy
-	icon = GFX_focus_generic_polish_deal
+	icon = GFX_goal_generic_major_alliance
 	available = {
 	is_subject = no
 	}
@@ -3168,7 +3145,7 @@ focus = {
 }
 focus = {
 	id = Zaproszenie_Estoni
-	icon = GFX_focus_generic_polish_deal
+	icon = GFX_goal_generic_major_alliance
 	available = {
 	is_subject = no
 	}
@@ -3189,7 +3166,7 @@ focus = {
 }
 focus = {
 	id = Zaproszenie_Czechoslowacji
-	icon = GFX_focus_generic_polish_deal
+	icon = GFX_goal_generic_major_alliance
 	available = {
 	is_subject = no
 	}
@@ -3209,7 +3186,7 @@ focus = {
 }
 focus = {
 	id = Zaproszenie_Rumuni
-	icon = GFX_focus_generic_polish_deal
+	icon = GFX_goal_generic_major_alliance
 	available = {
 	is_subject = no
 	}
@@ -3230,7 +3207,7 @@ focus = {
 }
 focus = {
 	id = Odrodzenie_sie_Rzeczpospolitej_obojga_narodow
-	icon = GFX_focus_generic_polish_deal
+	icon = GFX_goal_generic_alliance
 	available = {
 	is_subject = no
 	}
@@ -3247,7 +3224,7 @@ focus = {
 				limit = {
 						is_core_of = LAT
 					}
-				add_core_of = SIL
+				add_core_of = POL
 			}
 		annex_country = {
 				target = LAT
@@ -3532,5 +3509,117 @@ focus = {
 #				}
 #
 #	}
+#	focus = {
+#		id = Miaulowa_zamiec
+#		icon = GFX_focus_hol_prepare_the_inundation_lines
+#		cost = 5.00
+#		prerequisite = {
+#			focus = Trzech_zlych
+#		}
+#		x = 20
+#		y = 6
+#			completion_reward = {
+#					65 = {
+#							damage_building = {
+#									type = infrastructure
+#									damage = 1
+#								}
+#							damage_building = {
+#									type = arms_factory
+#									damage = 1
+#								}
+#							damage_building = {
+#									type = industrial_complex
+#									damage = 1
+#								}
+#						}
+#					54 = {
+#							damage_building = {
+#									type = infrastructure
+#									damage = 1
+#								}
+#							damage_building = {
+#									type = arms_factory
+#									damage = 1
+#								}
+#							damage_building = {
+#									type = industrial_complex
+#									damage = 1
+#								}
+#						}
+#					50 = {
+#							damage_building = {
+#									type = infrastructure
+#									damage = 1
+#								}
+#							damage_building = {
+#									type = arms_factory
+#									damage = 1
+#								}
+#							damage_building = {
+#									type = industrial_complex
+#									damage = 1
+#								}
+#						}
+#					3 = {
+#							damage_building = {
+#									type = infrastructure
+#									damage = 1
+#								}
+#							damage_building = {
+#									type = arms_factory
+#									damage = 1
+#								}
+#							damage_building = {
+#									type = industrial_complex
+#									damage = 1
+#								}
+#						}
+#					735 = {
+#							damage_building = {
+#									type = infrastructure
+#									damage = 1
+#								}
+#							damage_building = {
+#									type = arms_factory
+#									damage = 1
+#								}
+#							damage_building = {
+#									type = industrial_complex
+#									damage = 1
+#								}
+#						}
+#					21 = {
+#							damage_building = {
+#									type = infrastructure
+#									damage = 1
+#								}
+#							damage_building = {
+#									type = arms_factory
+#									damage = 1
+#								}
+#							damage_building = {
+#									type = industrial_complex
+#									damage = 1
+#								}
+#						}
+#					165 = {
+#							damage_building = {
+#									type = infrastructure
+#									damage = 1
+#								}
+#							damage_building = {
+#									type = arms_factory
+#									damage = 1
+#								}
+#							damage_building = {
+#									type = industrial_complex
+#									damage = 1
+#								}
+#						}
+#				}
+#
+#	}
 }
+
 
