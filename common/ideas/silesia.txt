@@ -240,6 +240,18 @@ ideas = {
 				consumer_goods_factor = 0.02
 			}
 		}
+	SIL_Consumer_five = {
+			allowed = {
+				original_tag = SIL
+				always = no
+			}
+
+			picture = chi_hyper_inflation
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
 	SIL_diwizje_powietrze = {
 			
 			allowed = {
@@ -365,13 +377,21 @@ ideas = {
 		}
 	}
 	SIL_Oslabic = {
-	name = SIL_Problem_narodowosciowy
+	name = SIL_Oslabic
 	picture = chi_army_corruption
 	modifier = {
 			army_attack_factor = -0.05
 			army_defence_factor = -0.05
 		}
 	}
+	SIL_Oslabic = {
+	name = SIL_Wzajemna_niechec
+	picture = chi_army_corruption
+	modifier = {
+			army_attack_factor = -0.15
+			training_time_army = 0.1
+	}
+}
 }
 #####################################
 #####################################

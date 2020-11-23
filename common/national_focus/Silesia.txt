@@ -75,7 +75,7 @@ focus_tree = {
 	focus = {
 		id = Silesia_Warfactory
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = Industial_Bonus
 		}
@@ -156,7 +156,7 @@ focus_tree = {
 	focus = {
 		id = Silesia_Civilian_Factory
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = Industial_Bonus
 		}
@@ -237,7 +237,7 @@ focus_tree = {
 	focus = {
 		id = Siliesia_factory
 		icon = GFX_goal_generic_construction2
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = Silesia_Warfactory
 		}
@@ -379,7 +379,7 @@ focus_tree = {
 	focus = {
 		id = Same_Kominy
 		icon = GFX_goal_generic_air_production
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = Siliesia_factory
 			focus = Gynsto_Woda
@@ -467,7 +467,7 @@ focus_tree = {
 	focus = {
 		id = Podziemne_fabryki
 		icon = GFX_goal_continuous_non_factory_construct
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = Same_Kominy
 		}
@@ -520,7 +520,7 @@ focus_tree = {
 		available ={
 			num_of_civilian_factories > 20
 		}
-		cost = 10.00
+		cost = 20.00
 		
 		prerequisite = {
 			focus = Naukowce_Jedne
@@ -532,7 +532,9 @@ focus_tree = {
 				}
 
 	}
-		
+#############################
+######Drzewko neutralnych####
+#############################
 	focus = {
 		id = Autostrada_do_Polski
 		icon = GFX_focus_por_concordat
@@ -629,8 +631,11 @@ focus_tree = {
 		prerequisite = {
 			focus = Pro_Polskosc
 		}
+		available = {
+		is_subject = no
+		}
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = Pro_Polskosc
 			completion_reward = {
 					SIL = {
@@ -645,6 +650,7 @@ focus_tree = {
 					set_country_flag = SILPOL_neutrality
 					add_war_support = 0.1
 					add_stability = 0.05
+					add_timed_idea = {idea = SIL_Koszty_Zjednoczenia days = 550}
 					annex_country = {
 							target = POL
 							transfer_troops = yes
@@ -772,6 +778,10 @@ focus_tree = {
 		prerequisite = {
 			focus = Jednoczmy_sie
 		}
+		available = {
+		not = { has_idea = SIL_Koszty_Zjednoczenia }
+		is_subject = no
+		}
 		x = 1
 		y = 1
 		relative_position_id = Jednoczmy_sie
@@ -821,6 +831,9 @@ focus_tree = {
 				}
 
 	}
+################################
+####Drzewko Faszystowskie#######
+################################
 	focus = {
 		id = Z_naszym_wodzem
 		icon = GFX_focus_generic_military_mission
@@ -968,73 +981,7 @@ focus_tree = {
 				}
 
 	}
-	focus = {
-		id = W_strone_OSI
-		icon = GFX_goal_generic_forceful_treaty
-		cost = 10.00
-		prerequisite = {
-			focus = W_strone_Wloch
-		}
-		prerequisite = {
-			focus = W_strone_Wegier
-		}
-		mutually_exclusive = {
-			focus = Trzech_zlych
-		}
-		x = 0
-		y = 1
-		relative_position_id = W_strone_Wegier
-			available = {
-					is_subject = no
-					NOT = {
-							has_war_with = GER
-						}
-					NOT = {
-							is_in_faction_with = ENG
-						}
-					SIL = {
-							is_in_faction = no
-							is_subject = no
-						}
-					GER = {
-							is_in_faction = yes
-							is_subject = no
-						}
-				}
-			available_if_capitulated = no
-			bypass = {
-					is_in_faction = yes
-					is_in_faction_with = GER
-						}
-			completion_reward = {
-					add_political_power = 120
-					GER = {
-							add_to_faction = SIL
-						}
-				}
-
-	}
-	focus = {
-	id = Tfu_komunisci
-	icon = GFX_focus_RAJ_indian_gurkhas
-	cost = 5.00
-	prerequisite = {
-		focus = Trzech_zlych
-		focus = W_strone_OSI
-	}
-	x = -1
-	y = 1
-	relative_position_id = W_strone_OSI
-	completion_reward = {
-		add_manpower = -2000
-		add_stability = -0.1
-		add_popularity = {
-						ideology = communism
-						popularity = -0.2
-					}
-		}
-	}
-	focus = {
+		focus = {
 		id = Trzech_zlych
 		icon = GFX_goal_generic_forceful_treaty
 		cost = 10.00
@@ -1110,8 +1057,136 @@ focus_tree = {
 
 	}
 	focus = {
+		id = W_strone_OSI
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = W_strone_Wloch
+		}
+		prerequisite = {
+			focus = W_strone_Wegier
+		}
+		mutually_exclusive = {
+			focus = Trzech_zlych
+		}
+		x = 0
+		y = 1
+		relative_position_id = W_strone_Wegier
+			available = {
+					is_subject = no
+					NOT = {
+							has_war_with = GER
+						}
+					NOT = {
+							is_in_faction_with = ENG
+						}
+					SIL = {
+							is_in_faction = no
+							is_subject = no
+						}
+					GER = {
+							is_in_faction = yes
+							is_subject = no
+						}
+				}
+			available_if_capitulated = no
+			bypass = {
+					is_in_faction = yes
+					is_in_faction_with = GER
+						}
+			completion_reward = {
+					add_political_power = 120
+					GER = {
+							add_to_faction = SIL
+						}
+				}
+
+	}
+	focus = {
+	id = Tfu_komunisci
+	icon = GFX_focus_RAJ_indian_gurkhas
+	cost = 5.00
+	prerequisite = {
+		focus = Trzech_zlych
+		focus = W_strone_OSI
+	}
+	x = -1
+	y = 1
+	relative_position_id = W_strone_OSI
+	completion_reward = {
+		add_manpower = -2000
+		add_stability = -0.1
+		add_popularity = {
+						ideology = communism
+						popularity = -0.2
+					}
+		}
+	}
+	focus = {
+	id = Rozwoj_gospodarki
+	icon = GFX_focus_RAJ_indian_gurkhas
+	cost = 5.00
+	prerequisite = {
+		focus = Tfu_komunisci
+	}
+	x = -1
+	y = 1
+	relative_position_id = Tfu_komunisci
+	completion_reward = {
+		add_ideas = SIL_Consumer_five
+		}
+	}
+	focus = {
+	id = Nauka_Historii
+	icon = GFX_goal_generic_propaganda
+	cost = 5.00
+	prerequisite = {
+		focus = Tfu_komunisci
+	}
+	x = 1
+	y = 1
+	relative_position_id = Tfu_komunisci
+	completion_reward = {
+		add_stability = 0.05
+		add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = Przygotowania_do_wielkiej_wojny
+		icon = GFX_goal_generic_propaganda
+		cost = 5.00
+		prerequisite = {
+			focus = Nauka_Historii
+			focus = Integracja_Moravi
+			focus = Rozwoj_gospodarki
+			focus = Wspolna_granica
+		}
+		x = -1
+		y = 1
+		relative_position_id = Nauka_Historii
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			}
+	}
+	focus = {
+	id = Pracownicy_wiezienni
+	icon = GFX_goal_generic_propaganda
+	cost = 5.00
+	prerequisite = {
+		focus = Integracja_Moravi
+	}
+	x = 1
+	y = 1
+	relative_position_id = Integracja_Moravi
+	completion_reward = {
+		add_stability = 0.05
+		add_war_support = 0.05
+		}
+	}
+	focus = {
 		id = Moravia_dla_Slaska 
-		icon = GFX_focus_hol_abandon_the_gold_standard
+		icon = GFX_goal_anschluss
 		cost = 10.00
 		prerequisite = {
 			focus = W_strone_OSI
@@ -1122,6 +1197,48 @@ focus_tree = {
 			completion_reward = {
 					#
 				}
+	}
+	focus = {
+		id = Integracja_Moravi 
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = Moravia_dla_Slaska
+		}
+		relative_position_id = Moravia_dla_Slaska
+		x = 1
+		y = 1
+			completion_reward = {
+					#
+				}
+	}
+	focus = {
+	id = Przyspieszenie_produkcji 
+	icon = GFX_focus_generic_tank_production
+	cost = 10.00
+	prerequisite = {
+		focus = Taktyka_blitzkriegu
+	}
+	relative_position_id = Taktyka_blitzkriegu
+	x = 0
+	y = 1
+		completion_reward = {
+				#
+			}
+	}
+	focus = {
+	id = Taktyka_blitzkriegu 
+	icon = GFX_goal_generic_build_tank
+	cost = 10.00
+	prerequisite = {
+		focus = Integracja_Moravi
+	}
+	relative_position_id = Integracja_Moravi
+	x = -1
+	y = 1
+		completion_reward = {
+				#
+			}
 	}
 	focus = {
 		id = Silna_gospodarka
@@ -1141,9 +1258,6 @@ focus_tree = {
 		id = Karwasz_Twarz_Barabasz
 		icon = GFX_focus_generic_air_defense
 		cost = 8.00
-		prerequisite = {
-			focus = Czeskie_porozumienie
-		}
 		prerequisite = {
 			focus = Trzech_zlych
 		}
@@ -1189,9 +1303,6 @@ focus_tree = {
 		prerequisite = {
 			focus = Karwasz_Twarz_Barabasz
 		}
-		prerequisite = {
-			focus = Miaulowa_zamiec
-		}
 		relative_position_id = Karwasz_Twarz_Barabasz
 		x = -1
 		y = 1
@@ -1223,6 +1334,20 @@ focus_tree = {
 				}
 
 	}
+	focus = {
+	id = Kosc_niezgody_w_centrum_Europy
+	icon = GFX_focus_generic_italy_first
+	cost = 10.00
+	prerequisite = {
+		focus = Wspolna_granica
+	}
+	relative_position_id = Wspolna_granica
+	x = -1
+	y = 1
+		completion_reward = {
+			#
+			}
+}
 	focus = {
 		id = Chopy_Baby_Do_broni
 		icon = GFX_focus_generic_little_entente
@@ -1726,11 +1851,11 @@ focus_tree = {
 		icon = GFX_focus_generic_support_the_left_right
 		cost = 12.00
 		prerequisite = {
-			focus = Wspolna_granica
+			focus = Przygotowania_do_wielkiej_wojny
 		}
-		x = -1
+		x = 0
 		y = 1
-		relative_position_id = Wspolna_granica
+		relative_position_id = Przygotowania_do_wielkiej_wojny
 			completion_reward = {
 					create_wargoal = {
 							type = take_state_focus
@@ -1773,7 +1898,6 @@ focus_tree = {
 							target = FRA
 						}
 		}
-
 	}
 
 	focus = {
@@ -2290,8 +2414,10 @@ focus_tree = {
 		cost = 10.00
 		prerequisite = {
 			focus = Napasc_na_Polsze
-			focus = Napasc_na_Pepiki
 		}
+		prerequisite = {			
+			focus = Napasc_na_Pepiki
+			}
 
 		x = 1
 		y = 1
@@ -2402,7 +2528,7 @@ focus_tree = {
 	}
 	focus = {
 		id = Promocja_comunismu_u_democratow
-		icon = GFX_focus_spr_class_war
+		icon = GFX_focus_por_workers_of_iberia
 		cost = 10.00
 		prerequisite = {
 			focus = AntyKapitalizm
@@ -2693,7 +2819,7 @@ focus = {
 	y = 1
 	relative_position_id = Ustanowienie_konstytucji
 	completion_reward = {
-		add_stability = 0.1
+		add_ideas = POL_internationalism_focus
 	}
 }
 focus = {
@@ -2980,7 +3106,7 @@ focus = {
 		focus = Zaproszenie_Czechoslowacji
 		focus = Zaproszenie_Estoni
 	}
-	x = 1
+	x = 0
 	y = 1
 	relative_position_id = Koniec_zniewolenia
 	completion_reward = {
