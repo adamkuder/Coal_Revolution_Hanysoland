@@ -1124,7 +1124,7 @@ focus_tree = {
 	}
 	focus = {
 	id = Rozwoj_gospodarki
-	icon = GFX_focus_RAJ_indian_gurkhas
+	icon = GFX_goal_reichsautobahn
 	cost = 5.00
 	prerequisite = {
 		focus = Tfu_komunisci
@@ -1157,9 +1157,9 @@ focus_tree = {
 		cost = 5.00
 		prerequisite = {
 			focus = Nauka_Historii
-			focus = Integracja_Moravi
 			focus = Rozwoj_gospodarki
 			focus = Wspolna_granica
+			focus = Integracja_Moravi
 		}
 		x = -1
 		y = 1
@@ -1168,6 +1168,20 @@ focus_tree = {
 			add_stability = 0.05
 			add_war_support = 0.05
 			}
+	}
+	focus = {
+		id = Integracja_Moravi 
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = Moravia_dla_Slaska
+		}
+		relative_position_id = Moravia_dla_Slaska
+		x = 1
+		y = 1
+			completion_reward = {
+					#
+				}
 	}
 	focus = {
 	id = Pracownicy_wiezienni
@@ -1180,8 +1194,7 @@ focus_tree = {
 	y = 1
 	relative_position_id = Integracja_Moravi
 	completion_reward = {
-		add_stability = 0.05
-		add_war_support = 0.05
+		add_ideas = SIL_production_factory
 		}
 	}
 	focus = {
@@ -1199,34 +1212,6 @@ focus_tree = {
 				}
 	}
 	focus = {
-		id = Integracja_Moravi 
-		icon = GFX_goal_anschluss
-		cost = 10.00
-		prerequisite = {
-			focus = Moravia_dla_Slaska
-		}
-		relative_position_id = Moravia_dla_Slaska
-		x = 1
-		y = 1
-			completion_reward = {
-					#
-				}
-	}
-	focus = {
-	id = Przyspieszenie_produkcji 
-	icon = GFX_focus_generic_tank_production
-	cost = 10.00
-	prerequisite = {
-		focus = Taktyka_blitzkriegu
-	}
-	relative_position_id = Taktyka_blitzkriegu
-	x = 0
-	y = 1
-		completion_reward = {
-				#
-			}
-	}
-	focus = {
 	id = Taktyka_blitzkriegu 
 	icon = GFX_goal_generic_build_tank
 	cost = 10.00
@@ -1239,6 +1224,20 @@ focus_tree = {
 		completion_reward = {
 				#
 			}
+	}
+	focus = {
+		id = Przyspieszenie_produkcji 
+		icon = GFX_focus_generic_tank_production
+		cost = 5.00
+		prerequisite = {
+			focus = Taktyka_blitzkriegu
+		}
+		relative_position_id = Taktyka_blitzkriegu
+		x = 0
+		y = 1
+			completion_reward = {
+					add_timed_idea = { idea = SIL_Tanki_ver_Ger days = 500}
+				}
 	}
 	focus = {
 		id = Silna_gospodarka
@@ -1335,8 +1334,8 @@ focus_tree = {
 
 	}
 	focus = {
-	id = Kosc_niezgody_w_centrum_Europy
-	icon = GFX_focus_generic_italy_first
+	id = Rozbudowa_Fabryk_w_frakcji
+	icon = GFX_goal_generic_construct_mil_factory
 	cost = 10.00
 	prerequisite = {
 		focus = Wspolna_granica
@@ -1344,9 +1343,27 @@ focus_tree = {
 	relative_position_id = Wspolna_granica
 	x = -1
 	y = 1
-		completion_reward = {
-			#
-			}
+	completion_reward = {
+	every_other_country = {
+		limit = { is_in_faction_with = SIL }
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+		}
+		}
+}
 }
 	focus = {
 		id = Chopy_Baby_Do_broni
@@ -1401,7 +1418,7 @@ focus_tree = {
 				uses = 2
 				category = artillery
 			}
-			#1 x 50% for Artillery Equipment
+			#1 x 100% for Artillery Equipment
 		}
 	}
 	focus = {
@@ -1710,6 +1727,39 @@ focus_tree = {
 
 	}
 	focus = {
+		id = Portugalia_z_nikad
+		icon = GFX_focus_generic_befriend_portugal
+		cost = 10.00
+		prerequisite = {
+			focus = Od_morza_do_morza
+		}
+		x = 1
+		y = 1
+		relative_position_id = Od_morza_do_morza
+		completion_reward = {
+					if = {
+							limit = {
+									POR = {
+											is_puppet = no
+											is_in_faction = no
+										}
+								}
+							add_to_faction = POR
+							SIL = {
+									add_opinion_modifier = {
+											target = POR
+											modifier = medium_increase
+										}
+								}
+							POR = {add_opinion_modifier = {
+									target = SIL
+									modifier = medium_increase
+								}
+						}
+					}
+		}
+	}
+	focus = {
 		id = Zaatakowanie_niedzwiedza
 		icon = GFX_focus_eng_expose_the_belly_of_the_bear
 		cost = 15.00
@@ -1845,7 +1895,34 @@ focus_tree = {
 				}
 
 	}
-
+	focus = {
+		id = Taktyka_nocnych_Wilkow
+		icon = GFX_goal_generic_air_fighter2
+		cost = 5.00
+		prerequisite = {
+			focus = Wspolna_granica
+		}
+		relative_position_id = Wspolna_granica
+		x = 1
+		y = 1
+		completion_reward = {
+			add_ideas = SIL_Nocne_Wilki
+		}
+	}
+	focus = {
+		id = Mysl_Organizacyjna
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = Taktyka_nocnych_Wilkow
+		}
+		relative_position_id = Taktyka_nocnych_Wilkow
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = SIL_Organization
+		}
+	}
 	focus = {
 		id = Tez_chcemy_byc_wielcy
 		icon = GFX_focus_generic_support_the_left_right
@@ -1853,8 +1930,12 @@ focus_tree = {
 		prerequisite = {
 			focus = Przygotowania_do_wielkiej_wojny
 		}
+		prerequisite = {
+			focus = Mysl_Organizacyjna
+			focus = Przyspieszenie_produkcji
+		}
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = Przygotowania_do_wielkiej_wojny
 			completion_reward = {
 					create_wargoal = {
@@ -1880,59 +1961,66 @@ focus_tree = {
 							add_claim_by = SIL
 						}
 				}
-
 	}
 	focus = {
-		id = POD_FRA
+		id = VSFRA
 		icon = GFX_focus_attack_france
 		cost = 10.00
 		prerequisite = {
-			focus = Wspolna_granica
+			focus = Tez_chcemy_byc_wielcy
 		}
-		relative_position_id = Wspolna_granica
-		x = 1
+		relative_position_id = Tez_chcemy_byc_wielcy
+		x = 2
 		y = 1
 		completion_reward = {
-					create_wargoal = {
-							type = take_state_focus
-							target = FRA
-						}
+			add_ideas = Sil_Target_Fra
 		}
 	}
-
 	focus = {
-		id = Portugalia_z_nikad
-		icon = GFX_focus_generic_befriend_portugal
+		id = VSUSA
+		icon = GFX_focus_usa_recruit_the_free_corps
 		cost = 10.00
 		prerequisite = {
-			focus = Od_morza_do_morza
+			focus = Tez_chcemy_byc_wielcy
 		}
-		x = 1
+		relative_position_id = Tez_chcemy_byc_wielcy
+		x = -2
 		y = 1
-		relative_position_id = Od_morza_do_morza
 		completion_reward = {
-					if = {
-							limit = {
-									POR = {
-											is_puppet = no
-											is_in_faction = no
-										}
-								}
-							add_to_faction = POR
-							SIL = {
-									add_opinion_modifier = {
-											target = POR
-											modifier = medium_increase
-										}
-								}
-							POR = {add_opinion_modifier = {
-									target = SIL
-									modifier = medium_increase
-								}
-						}
-					}
+			add_ideas = Sil_Target_Usa
 		}
 	}
+	focus = {
+		id = VSENG
+		icon = GFX_focus_attack_britain
+		cost = 10.00
+		prerequisite = {
+			focus = Tez_chcemy_byc_wielcy
+		}
+		relative_position_id = Tez_chcemy_byc_wielcy
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = Sil_Target_Eng
+		}
+	}
+	focus = {
+		id = Imperium_Slaskie
+		icon = GFX_focus_attack_britain
+		cost = 20.00
+		prerequisite = {
+			focus = VSENG
+			focus = VSFRA
+			focus = VSUSA
+		}
+		relative_position_id = VSENG
+		x = 0
+		y = 3
+		completion_reward = {
+			#dss
+		}
+	}
+	
 	#####################################
 	###### Drzewko komunistyczne ########
 	#####################################
@@ -3105,12 +3193,13 @@ focus = {
 		focus = Zaproszenie_Rumuni
 		focus = Zaproszenie_Czechoslowacji
 		focus = Zaproszenie_Estoni
+		focus = Imperium_Slaskie
 	}
 	x = 0
 	y = 1
 	relative_position_id = Koniec_zniewolenia
 	completion_reward = {
-		sov ={ add_ideas = SIL_Oslabic }
+		SOV = { add_ideas = SIL_Oslabic }
 	}
 }
 focus = {
