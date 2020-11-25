@@ -317,6 +317,27 @@ ideas = {
 				stability_weekly = -0.005
 			}
 		}
+	Sil_promote_fascism = {
+		allowed = {
+			always = no
+		}
+		removal_cost = -1
+		picture = generic_fascism_drift_bonus
+		modifier = {
+			fascism_drift = 0.35
+			stability_weekly = -0.005
+		}
+	}
+	Sil_Polityka_Prorodzinna = {
+		allowed = {
+			always = no
+		}
+		removal_cost = -1
+		picture = generic_democratic_drift_bonus
+		modifier = {
+			monthly_population = 0.25
+		}
+	}
 	SIL_democratic_influence = {
 			allowed = {
 				always = no

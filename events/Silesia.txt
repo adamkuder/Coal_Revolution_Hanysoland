@@ -757,6 +757,59 @@ country_event = {
 		ai_chance = { factor = 20 }
 	}
 }
+# Event do zaproszenie do frakcji Rumuni
+country_event = {
+	id = Silesia.12
+	title = Silesia.12.t
+	desc = Silesia.12.d	
+	is_triggered_only = yes
+	option = {
+		name = silesia.12.a
+		ai_chance = { factor = 50 }
+		SIL = {
+			puppet = MEX
+		}
+	}
+	option = {
+		name = silesia.12.b
+		ai_chance = { factor = 50 }
+		MEX = {country_event = { id = silesia.13 }}
+	}
+}
+country_event = {
+	id = Silesia.13
+	title = Silesia.13.t
+	desc = Silesia.13.d	
+	is_triggered_only = yes
+	option = {
+		name = silesia.13.a
+		ai_chance = { factor = 35 }
+		SIL = {
+			every_state = {
+					limit = {
+							is_core_of = MEX
+						}
+					add_core_of = SIL
+				}
+		}
+		set_cosmetic_tag = SILMEX_F
+		set_country_flag = SILMEX_F
+		add_war_support = -0.25
+		add_stability = -0.25
+		add_timed_idea = {idea = SIL_Koszty_Zjednoczenia days = 550}
+		annex_country = {
+				target = MEX
+				transfer_troops = yes
+			}
+	}
+	option = {
+		name = silesia.12.b
+		ai_chance = { factor = 65 }
+		GER = {
+			add_to_faction = MEX
+		}
+	}
+}
 
 # Old events 
 #country_event = {

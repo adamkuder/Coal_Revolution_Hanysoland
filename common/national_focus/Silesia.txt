@@ -648,8 +648,8 @@ focus_tree = {
 						}
 					set_cosmetic_tag = SILPOL_neutrality
 					set_country_flag = SILPOL_neutrality
-					add_war_support = 0.1
-					add_stability = 0.05
+					add_war_support = -0.25
+					add_stability = -0.25
 					add_timed_idea = {idea = SIL_Koszty_Zjednoczenia days = 550}
 					annex_country = {
 							target = POL
@@ -1170,34 +1170,6 @@ focus_tree = {
 			}
 	}
 	focus = {
-		id = Integracja_Moravi 
-		icon = GFX_focus_generic_diplomatic_treaty
-		cost = 10.00
-		prerequisite = {
-			focus = Moravia_dla_Slaska
-		}
-		relative_position_id = Moravia_dla_Slaska
-		x = 1
-		y = 1
-			completion_reward = {
-					#
-				}
-	}
-	focus = {
-	id = Pracownicy_wiezienni
-	icon = GFX_goal_generic_propaganda
-	cost = 5.00
-	prerequisite = {
-		focus = Integracja_Moravi
-	}
-	x = 1
-	y = 1
-	relative_position_id = Integracja_Moravi
-	completion_reward = {
-		add_ideas = SIL_production_factory
-		}
-	}
-	focus = {
 		id = Moravia_dla_Slaska 
 		icon = GFX_goal_anschluss
 		cost = 10.00
@@ -1210,6 +1182,85 @@ focus_tree = {
 			completion_reward = {
 					#
 				}
+	}
+	focus = {
+		id = Integracja_Moravi 
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = Moravia_dla_Slaska
+		}
+		relative_position_id = Moravia_dla_Slaska
+		x = 1
+		y = 1
+			completion_reward = {
+					add_state_core = 75
+				}
+	}
+	focus = {
+		id = Pracownicy_wiezienni
+		icon = GFX_goal_generic_propaganda
+		cost = 5.00
+		prerequisite = {
+			focus = Integracja_Moravi
+		}
+		x = 1
+		y = 1
+		relative_position_id = Integracja_Moravi
+		completion_reward = {
+			add_ideas = SIL_production_factory
+			}
+	}
+	focus = {
+		id = Polityka_Prorodzinna
+		icon = GFX_goal_generic_propaganda
+		cost = 5.00
+		prerequisite = {
+			focus = Pracownicy_wiezienni
+		}
+		x = -1
+		y = 1
+		relative_position_id = Pracownicy_wiezienni
+		completion_reward = {
+			add_ideas = Sil_Polityka_Prorodzinna
+			}
+	}
+	
+	focus = {
+		id = Poparcie_Junty_Mex
+		icon = GFX_focus_mex_caudillo_private_armies
+		cost = 10.00
+		bypass = {
+			has_war_with = MEX
+		}
+		prerequisite = {
+			focus = Integracja_Moravi
+		}
+		x = 3
+		y = 1
+		relative_position_id = Integracja_Moravi
+		completion_reward = {
+			MEX = { add_timed_idea = {idea = Sil_promote_fascism days = 500 }}
+			}
+	}
+	focus = {
+		id = Porozumienie_Nazistowskie
+		icon = GFX_focus_mex_jefe_maximo
+		cost = 5.00
+		available = {
+			MEX= {
+				has_government = fascism
+			}
+		}
+		prerequisite = {
+			focus = Poparcie_Junty_Mex
+		}
+		x = -1
+		y = 1
+		relative_position_id = Poparcie_Junty_Mex
+		completion_reward = {
+			country_event = { id = silesia.12 }
+			}
 	}
 	focus = {
 	id = Taktyka_blitzkriegu 
@@ -1233,7 +1284,7 @@ focus_tree = {
 			focus = Taktyka_blitzkriegu
 		}
 		relative_position_id = Taktyka_blitzkriegu
-		x = 0
+		x = -1
 		y = 1
 			completion_reward = {
 					add_timed_idea = { idea = SIL_Tanki_ver_Ger days = 500}
@@ -1275,6 +1326,7 @@ focus_tree = {
 							transfer_state = 664
 						}
 					SIL = {
+							add_state_core = 75
 							add_state_core = 72
 							transfer_state = 72
 							puppet = SLO
@@ -1299,6 +1351,9 @@ focus_tree = {
 		id = Wspolna_granica
 		icon = GFX_focus_generic_italy_first
 		cost = 10.00
+		bypass = {
+			NOT = {country_exists = AUS}
+		}
 		prerequisite = {
 			focus = Karwasz_Twarz_Barabasz
 		}
@@ -1309,7 +1364,7 @@ focus_tree = {
 					if = {
 						
 						limit={
-							country_exists = YUG
+							country_exists = AUS
 							}
 							HUN = {
 									create_wargoal = {
@@ -1363,8 +1418,64 @@ focus_tree = {
 				}
 		}
 		}
-}
-}
+		}
+	}
+	focus = {
+		id = Aneksja_Slowacji
+		icon = GFX_focus_CZE_german_puppet
+		cost = 10.00
+		prerequisite = {
+			focus = Rozbudowa_Fabryk_w_frakcji
+		}
+		available = {
+			is_subject = no
+		}
+		relative_position_id = Rozbudowa_Fabryk_w_frakcji
+		x = 1
+		y = 1
+		completion_reward = {
+			annex_country = {
+			target = SLO
+			transfer_troops = yes
+			}
+
+			add_state_core = 71
+			add_state_core = 70
+		}
+	}
+	focus = {
+		id = RozbiorRumuni
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		cost = 10.00
+		prerequisite = {
+			focus = Aneksja_Slowacji
+		}
+		available = {
+			is_subject = no
+		}
+		relative_position_id = Aneksja_Slowacji
+		x = 1
+		y = 1
+		completion_reward = {
+		create_wargoal = {
+				type = take_state_focus
+				target = ROM
+			}
+		79 = {
+				add_claim_by = SIL
+			}
+		78 = {
+				add_claim_by = SIL
+			}
+		766 = {
+				add_claim_by = SIL
+			}
+		88 = {
+		add_claim_by = SIL
+		}
+	
+		}
+	}
 	focus = {
 		id = Chopy_Baby_Do_broni
 		icon = GFX_focus_generic_little_entente
@@ -1917,7 +2028,7 @@ focus_tree = {
 			focus = Taktyka_nocnych_Wilkow
 		}
 		relative_position_id = Taktyka_nocnych_Wilkow
-		x = 0
+		x = 1
 		y = 1
 		completion_reward = {
 			add_ideas = SIL_Organization
@@ -1927,12 +2038,22 @@ focus_tree = {
 		id = Tez_chcemy_byc_wielcy
 		icon = GFX_focus_generic_support_the_left_right
 		cost = 12.00
+		bypass = {
+			has_war_with = POL
+		}
 		prerequisite = {
 			focus = Przygotowania_do_wielkiej_wojny
 		}
 		prerequisite = {
 			focus = Mysl_Organizacyjna
 			focus = Przyspieszenie_produkcji
+		}
+		prerequisite = {
+			focus = Aneksja_Slowacji
+			focus = Polityka_Prorodzinna
+		}
+		available = {
+			is_subject = no
 		}
 		x = 0
 		y = 2
@@ -1942,9 +2063,6 @@ focus_tree = {
 							type = take_state_focus
 							target = POL
 						}
-					10 = {
-							add_claim_by = SIL
-						}
 					90 = {
 							add_claim_by = SIL
 						}
@@ -1952,12 +2070,6 @@ focus_tree = {
 							add_claim_by = SIL
 						}
 					92 = {
-							add_claim_by = SIL
-						}
-					97 = {
-							add_claim_by = SIL
-						}
-					98 = {
 							add_claim_by = SIL
 						}
 				}
@@ -2457,10 +2569,15 @@ focus_tree = {
 		id = Napasc_na_Polsze
 		icon = GFX_goal_generic_more_territorial_claims
 		cost = 10.00
+		bypass = {
+			has_war_with = POL
+			}
 		prerequisite = {
 			focus = Przygotowanie_do_rozbiorow
 		}
-
+		available = {
+			is_subject = no
+		}
 		x = -1
 		y = 1
 		relative_position_id = Przygotowanie_do_rozbiorow
@@ -2477,10 +2594,15 @@ focus_tree = {
 		id = Napasc_na_Pepiki
 		icon = GFX_focus_hol_war_on_pacifism
 		cost = 10.00
+		bypass = {
+			has_war_with = CZE
+		}
 		prerequisite = {
 			focus = Przygotowanie_do_rozbiorow
 		}
-
+		available = {
+			is_subject = no
+		}
 		x = 1
 		y = 1
 		relative_position_id = Przygotowanie_do_rozbiorow
@@ -3152,6 +3274,9 @@ focus = {
 	available = {
 	is_subject = no
 	}
+	bypass = {
+		has_war_with = GER
+	}
 	cost = 10.00
 	prerequisite = {
 		focus = Przygotowanie_taktyki
@@ -3222,6 +3347,9 @@ focus = {
 focus = {
 	id = Koniec_zniewolenia_sov
 	icon = GFX_focus_attack_soviet
+	bypass = {
+		has_war_with = SOV
+	}
 	available = {
 	is_subject = no
 	}
@@ -3259,7 +3387,7 @@ focus = {
 	y = 1
 	relative_position_id = Silna_gospodarka_1
 	completion_reward = {
-		can_create_factions = yes
+		set_rule = {can_create_factions = yes}
 	}
 }
 focus = {
