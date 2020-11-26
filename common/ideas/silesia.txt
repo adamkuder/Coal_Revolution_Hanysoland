@@ -476,15 +476,15 @@ ideas = {
 		}
 	}
 	SIL_Koszty_Zjednoczenia = {
-		name = SIL_Wzajemna_niechec
+		name = SIL_Koszty_Zjednoczenia
 		picture = chi_army_corruption
 		modifier = {
 				army_attack_factor = -0.15
-				training_time_army = 0.1
+				training_time_army_factor = 0.1
 		}
 	}
 	SIL_Nocne_Wilki = {
-		name = SIL_Wzajemna_niechec
+		name = SIL_Nocne_Wilki
 		picture = chi_army_corruption
 		modifier = {
 			air_attack_factor = 0.1
@@ -492,15 +492,23 @@ ideas = {
 		}
 	}
 	SIL_Organization = {
-		name = SIL_Wzajemna_niechec
+		name = SIL_Organization
 		picture = chi_army_corruption
 		modifier = {
 			army_org_factor = 0.1
 		}
 	}
-
+	SIL_Wielonarodowosc= {
+		name = SIL_Wielonarodowosc
+		picture = chi_army_corruption
+		modifier = {
+			stability_weekly_factor = 0.005
+			war_support_weekly_factor = 0.0025
+			weekly_manpower = 1000
+		}
+	}
 	SIL_production_factory = {
-		name = SIL_Wzajemna_niechec
+		name = SIL_production_factory
 		picture = chi_army_corruption
 		modifier = {
 			production_factory_max_efficiency_factor = 0.1
