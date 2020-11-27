@@ -518,7 +518,7 @@ focus_tree = {
 		id = wincyj_sie_ucz
 		icon = GFX_focus_research2
 		available ={
-			num_of_civilian_factories > 20
+			num_of_civilian_factories > 35
 		}
 		cost = 20.00
 		
@@ -650,6 +650,10 @@ focus_tree = {
 					set_country_flag = SILPOL_neutrality
 					add_war_support = -0.25
 					add_stability = -0.25
+					set_politics = {
+						ruling_party = neutrality
+						elections_allowed = no
+					}
 					add_timed_idea = {idea = SIL_Koszty_Zjednoczenia days = 550}
 					annex_country = {
 							target = POL
@@ -971,7 +975,128 @@ focus_tree = {
 				}
 			}
 		}
+	}
+	focus = {
+		id = Handel_zagraniczny
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 5.00
+		prerequisite = {
+			focus = Rozbudowa_infakstruktury_centralnej
+			focus = Rozbudowa_infakstruktury_zachodniej
+			focus = Rozbudowa_infakstruktury_wsodniej
+		}
+		x = -2
+		y = 1
+		relative_position_id = Rozbudowa_infakstruktury_centralnej
+		completion_reward = {
+			add_ideas = POL_internationalism_focus
+		}
+	}
+	focus = {
+		id = Budowa_szkol
+		icon = GFX_focus_research
+		cost = 5.00
+		prerequisite = {
+			focus = Rozbudowa_infakstruktury_centralnej
+			focus = Rozbudowa_infakstruktury_zachodniej
+			focus = Rozbudowa_infakstruktury_wsodniej
+		}
+		available = {
+		not = { has_idea = SIL_Koszty_Zjednoczenia }
+		is_subject = no
+		}
+		x = 2
+		y = 1
+		relative_position_id = Rozbudowa_infakstruktury_centralnej
+			completion_reward = {
+				add_ideas = SIL_research_bonus
+				}
+	}
+	focus = {
+		id = Silna_gospodarka
+		icon = GFX_focus_hol_abandon_the_gold_standard
+		cost = 10.00
+		prerequisite = {
+			focus = Handel_zagraniczny
+			focus = Budowa_szkol
+		}
+		relative_position_id=Handel_zagraniczny
+		x = 1
+		y = 1
+			completion_reward = {
+					add_ideas = SIL_Silna_gospodarka_idea
+				}
+	}
+	focus = {
+		id = Nowe_metody_Umocnien 
+		icon = GFX_goal_generic_fortify_city
+		cost = 5.00
+		prerequisite = {
+			focus = Handel_zagraniczny
+			focus = Budowa_szkol
+		}
+		x = -1
+		y = 1
+		relative_position_id = Budowa_szkol
+		completion_reward = {
+			add_ideas = FRA_fortification_focus
+		}
+	}
+	focus = {
+		id = Sila_zjednoczenia
+		icon = GFX_focus_RAJ_indian_gentlemen_offcers
+		cost = 5.00
+		prerequisite = {
+			focus = Handel_zagraniczny
+			focus = Budowa_szkol
+		}
+		x = 1
+		y = 1
+		relative_position_id = Budowa_szkol
+		completion_reward = {
+			add_ideas = SIL_sila_zjednoczenia
+		}
+	}			
+	focus = {
+		id = Utimatum_Dla_Litwy
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 10.00
+		prerequisite = {
+			focus = Rozbudowa_infakstruktury_centralnej
+		}
+		prerequisite = {
+			focus = Rozbudowa_infakstruktury_wsodniej
+		}
+		prerequisite = {
+			focus = Rozbudowa_infakstruktury_zachodniej
+		}
+		available = {
+		not = { has_idea = SIL_Koszty_Zjednoczenia }
+		is_subject = no
+		}
+		x = 0
+		y = 1
+		relative_position_id = Rozbudowa_infakstruktury_centralnej
+			completion_reward = {
+					LIT = {
+						country_event = silesia.14
+						}
+				}
 	}		
+	focus = {
+		id = Ochotnicy
+		icon = GFX_goal_rhineland
+		cost = 5.00
+		prerequisite = {
+			focus = Handel_zagraniczny
+				}
+		x = -1
+		y = 1
+		relative_position_id = Handel_zagraniczny
+		completion_reward = {
+			add_ideas = SIL_volunteers
+		}
+	}
 	focus = {
 		id = Ukrainskie_Dymy
 		icon = GFX_goal_generic_more_territorial_claims
@@ -1025,43 +1150,11 @@ focus_tree = {
 				}
 
 	}
-	focus = {
-		id = Pojednanie_Dawnych_Narodow
-		icon = GFX_focus_hol_the_foundations_of_defense
-		cost = 10.00
-		prerequisite = {
-			#focus = Jednoczmy_sie
-		}
-		available = {
-		not = { has_idea = SIL_Koszty_Zjednoczenia }
-		is_subject = no
-		}
-		x = 1
-		y = 10
-		relative_position_id = Jednoczmy_sie
-			completion_reward = {
-					SIL = {
-							every_state = {
-									limit = {
-											is_core_of = LIT
-										}
-									add_core_of = SIL
-								}
-						}
-					annex_country = {
-							target = LIT
-							transfer_troops = yes
-						}
-				}
 
-	}
 	focus = {
 		id = Od_morza_do_morza
 		icon = GFX_focus_invite_romania
 		cost = 10.00
-		prerequisite = {
-			focus = Pojednanie_Dawnych_Narodow
-		}
 		prerequisite = {
 			focus = Ukrainskie_Dymy
 		}
@@ -1407,7 +1500,7 @@ focus_tree = {
 	}
 	focus = {
 		id = Przygotowania_do_wielkiej_wojny
-		icon = GFX_goal_generic_propaganda
+		icon = GFX_focus_secret_rearmament
 		cost = 5.00
 		prerequisite = {
 			focus = Nauka_Historii
@@ -1453,7 +1546,7 @@ focus_tree = {
 	}
 	focus = {
 		id = Pracownicy_wiezienni
-		icon = GFX_goal_generic_propaganda
+		icon = GFX_focus_AST_squander_bug
 		cost = 5.00
 		prerequisite = {
 			focus = Integracja_Moravi
@@ -1542,19 +1635,6 @@ focus_tree = {
 		y = 1
 			completion_reward = {
 					add_timed_idea = { idea = SIL_Tanki_ver_Ger days = 500}
-				}
-	}
-	focus = {
-		id = Silna_gospodarka
-		icon = GFX_focus_hol_abandon_the_gold_standard
-		cost = 10.00
-		prerequisite = {
-			#focus = Jednoczmy_sie
-		}
-		x = 10
-		y = 1
-			completion_reward = {
-					add_ideas = SIL_Silna_gospodarka_idea
 				}
 	}
 	focus = {
@@ -1707,7 +1787,7 @@ focus_tree = {
 			is_subject = no
 		}
 		relative_position_id = Aneksja_Slowacji
-		x = 1
+		x = -2
 		y = 1
 		completion_reward = {
 		create_wargoal = {
@@ -1995,7 +2075,7 @@ focus_tree = {
 		id = Pogodzenie_skluconych
 		icon = GFX_goal_generic_national_unity
 		cost = 10.00
-		available = { date > 1937.1.1}
+		available = { date > 1936.6.6}
 		x = 8
 		y = 0
 			completion_reward = {
@@ -2008,7 +2088,7 @@ focus_tree = {
 		id = Uklad_Opolski
 		icon = GFX_goal_rhineland
 		cost = 10.00
-		available = { date > 1938.1.1}
+		available = { date > 1937.1.1}
 		prerequisite = {
 		focus = Pogodzenie_skluconych
 		}
@@ -2025,7 +2105,7 @@ focus_tree = {
 		id = Nasz_narod
 		icon = GFX_focus_generic_home_defense
 		cost = 10.00
-		available = { date > 1939.1.1}
+		available = { date > 1938.1.1}
 		relative_position_id = Uklad_Opolski
 		prerequisite = {
 			focus = Uklad_Opolski
@@ -2653,8 +2733,10 @@ focus_tree = {
 	cost = 10.00
 	prerequisite = {
 		focus = Soviecka_Obronnosc
+		focus = Przyspieszenie_produkcji
+		focus = Mysl_Organizacyjna
 	}
-	x = -1
+	x = -2
 	y = 1
 	relative_position_id = Soviecka_Obronnosc
 	completion_reward = {
@@ -2887,6 +2969,25 @@ focus_tree = {
 		relative_position_id = Napasc_na_Polsze
 		completion_reward = {
 			country_event = { id = silesia.5 }
+		}
+	}
+	focus = {
+		id = Ruch_Quentin_Tarantino
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		available = {
+			has_war = no 
+		}
+		cost = 0.43
+		prerequisite = {
+			focus = Wspolna_granica_SIL_SOV
+		}
+		x = 0
+		y = 2
+		relative_position_id = Wspolna_granica_SIL_SOV
+		completion_reward = {
+			SIL = { limit ={has_war = NOT} 
+
+			}
 		}
 	}
 	focus = {

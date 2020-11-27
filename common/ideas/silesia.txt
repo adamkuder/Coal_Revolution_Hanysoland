@@ -514,6 +514,21 @@ ideas = {
 			production_factory_max_efficiency_factor = 0.1
 		}
 	}
+	SIL_volunteers = {
+	name = SIL_production_factory
+	picture = chi_army_corruption
+	modifier = {
+		send_volunteers_tension = -0.5
+		send_volunteer_size = 5
+	}
+	SIL_sila_zjednoczenia = {
+	name = SIL_production_factory
+	picture = chi_army_corruption
+	modifier = {
+		non_core_manpower = 0.1
+	}
+}
+	
 	
 }
 #####################################
