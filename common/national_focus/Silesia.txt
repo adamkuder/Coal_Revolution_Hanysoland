@@ -559,9 +559,6 @@ focus_tree = {
 							ideology = neutrality
 							popularity = 0.15
 						}
-
-					add_stability = 0.05
-					add_war_support = 0.15
 					SIL = {
 						add_ideas = SIL_neutrality_influence
 							add_opinion_modifier = {
@@ -648,8 +645,8 @@ focus_tree = {
 						}
 					set_cosmetic_tag = SILPOL_neutrality
 					set_country_flag = SILPOL_neutrality
-					add_war_support = -0.25
-					add_stability = -0.25
+					add_war_support = -0.35
+					add_stability = -0.35
 					set_politics = {
 						ruling_party = neutrality
 						elections_allowed = no
@@ -1013,15 +1010,44 @@ focus_tree = {
 				}
 	}
 	focus = {
-		id = Silna_gospodarka
-		icon = GFX_focus_hol_abandon_the_gold_standard
+		id = Podstawowe_prawa_czlowieka
+		icon = GFX_focus_hol_united_netherlands
 		cost = 10.00
 		prerequisite = {
 			focus = Handel_zagraniczny
 			focus = Budowa_szkol
 		}
 		relative_position_id=Handel_zagraniczny
+		x = 2
+		y = 1
+			completion_reward = {
+					add_political_power = 100
+					add_stability = 0.05
+				}
+	}
+	focus = {
+		id = Rozwazenie_iterwencji
+		icon = GFX_goal_demand_sudetenland
+		cost = 5.00
+		prerequisite = {
+			focus = Podstawowe_prawa_czlowieka
+		}
+		relative_position_id=Podstawowe_prawa_czlowieka
 		x = 1
+		y = 1
+			completion_reward = {
+				add_war_support = 0.15
+				}
+	}
+	focus = {
+		id = Silna_gospodarka
+		icon = GFX_focus_hol_abandon_the_gold_standard
+		cost = 10.00
+		prerequisite = {
+			focus = Podstawowe_prawa_czlowieka
+		}
+		relative_position_id=Podstawowe_prawa_czlowieka
+		x = -1
 		y = 1
 			completion_reward = {
 					add_ideas = SIL_Silna_gospodarka_idea
@@ -1032,12 +1058,11 @@ focus_tree = {
 		icon = GFX_goal_generic_fortify_city
 		cost = 5.00
 		prerequisite = {
-			focus = Handel_zagraniczny
-			focus = Budowa_szkol
+			focus = Ochotnicy
 		}
-		x = -1
+		x = 0
 		y = 1
-		relative_position_id = Budowa_szkol
+		relative_position_id = Ochotnicy
 		completion_reward = {
 			add_ideas = FRA_fortification_focus
 		}
@@ -1098,15 +1123,138 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = Dzialalnosc_antyNazistowska
+		icon = GFX_focus_ger_oppose_hitler
+		cost = 5.00
+		prerequisite = {
+			focus = Silna_gospodarka
+				}
+		prerequisite = {
+			focus = Rozwazenie_iterwencji
+		}
+		x = 1
+		y = 1
+		relative_position_id = Silna_gospodarka
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.15
+			}
+		}
+	}
+	focus = {
+		id = Wyprzedzajace_uderzenie
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		cost = 10.00
+		prerequisite = {
+			focus = Dzialalnosc_antyNazistowska
+		}
+		x = 0
+		y = 1
+		relative_position_id = Dzialalnosc_antyNazistowska
+		completion_reward = {
+			SIL = {
+			declare_war_on = {
+					target = GER
+					type = take_state_focus
+					generator = { 42  51 }
+				}
+			}
+			GER = {
+				add_timed_idea = {
+					idea = Sil_Zaskakujaca_Agresja days = 90
+				}
+			}
+		}
+	}
+	focus = {
+		id = Ujednolicenie_Prawa
+		icon = GFX_focus_generic_self_management
+		cost = 5.00
+		prerequisite = {
+			focus = Silna_gospodarka
+				}
+		prerequisite = {
+			focus = Rozwazenie_iterwencji
+		}
+		x = -1
+		y = 1
+		relative_position_id = Silna_gospodarka
+		completion_reward = {
+			add_popularity = {
+				add_political_power = 150
+			}
+		}
+	}
+	focus = {
+		id = Podubdka_Marynarki
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = Ujednolicenie_Prawa
+				}
+		x = 0
+		y = 1
+		relative_position_id = Ujednolicenie_Prawa
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = Domagajmy_sie_koloni
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = Podubdka_Marynarki
+				}
+		x = 0
+		y = 1
+		relative_position_id = Podubdka_Marynarki
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = Kupno_madagaskaru
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = Domagajmy_sie_koloni
+				}
+		mutually_exclusive = {
+			focus = Madagaskar_albo_wojna
+		}
+		x = -1
+		y = 1
+		relative_position_id = Domagajmy_sie_koloni
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = Madagaskar_albo_wojna
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = Domagajmy_sie_koloni
+				}
+		mutually_exclusive = {
+			focus = Kupno_madagaskaru
+		}
+		x = 1
+		y = 1
+		relative_position_id = Domagajmy_sie_koloni
+		completion_reward = {
+		}
+	}
+	focus = {
 		id = Ukrainskie_Dymy
 		icon = GFX_goal_generic_more_territorial_claims
 		cost = 10.00
 		prerequisite = {
-			#focus = Jednoczmy_sie
+			focus = Rozwazenie_iterwencji
 		}
-		x = -1
-		y = 10
-		relative_position_id = Jednoczmy_sie
+		x = 1
+		y = 1
+		relative_position_id = Rozwazenie_iterwencji
 			completion_reward = {
 					UKR = {
 							transfer_state = 199
@@ -1150,17 +1298,79 @@ focus_tree = {
 				}
 
 	}
+	focus = {
+		id = Dzialalnosc_antyKomunistowska
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = Ukrainskie_Dymy
+				}
+		x = 0
+		y = 1
+		relative_position_id = Ukrainskie_Dymy
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = -0.15
+			}
+		}
+	}
+	focus = {
+		id = Przygotowanie_do_wojny_z_ZSSR
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = Dzialalnosc_antyKomunistowska
+				}
+		x = 0
+		y = 1
+		relative_position_id = Dzialalnosc_antyKomunistowska
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = Swiatlo_na_Syberii
+		icon = GFX_focus_generic_self_management
+		cost = 20.00
+		prerequisite = {
+			focus = Koniec_Zwiazku_radzieckiego
+				}
+		x = 0
+		y = 1
+		relative_position_id = Koniec_Zwiazku_radzieckiego
+		completion_reward = { 
+		}
+	}
 
+	focus = {
+		id = Koniec_Zwiazku_radzieckiego
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = Przygotowanie_do_wojny_z_ZSSR
+				}
+		x = 0
+		y = 1
+		relative_position_id = Przygotowanie_do_wojny_z_ZSSR
+		completion_reward = {
+		}
+	}
 	focus = {
 		id = Od_morza_do_morza
 		icon = GFX_focus_invite_romania
 		cost = 10.00
 		prerequisite = {
-			focus = Ukrainskie_Dymy
+			focus = Sila_zjednoczenia
+		}
+		prerequisite = {
+			focus = Rozwazenie_iterwencji
+		}
+		mutually_exclusive = {
+			focus = RozbiorRumuni
 		}
 		x = 1
-		y = 1
-		relative_position_id = Ukrainskie_Dymy
+		y = 2
+		relative_position_id = Sila_zjednoczenia
 			completion_reward = {
 					set_rule = {
 							can_create_factions = yes
@@ -1777,17 +1987,21 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = RozbiorRumuni
+		id = Rozbior_Rumuni
 		icon = GFX_focus_eng_move_to_secure_the_dominions
 		cost = 10.00
 		prerequisite = {
 			focus = Aneksja_Slowacji
+			focus = Rozwazenie_iterwencji
 		}
 		available = {
 			is_subject = no
 		}
+		mutually_exclusive = {
+			focus = Od_morza_do_morza
+		}
 		relative_position_id = Aneksja_Slowacji
-		x = -2
+		x = -1
 		y = 1
 		completion_reward = {
 		create_wargoal = {
@@ -2124,7 +2338,7 @@ focus_tree = {
 		prerequisite = {
 			focus = Od_morza_do_morza
 		}
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = Od_morza_do_morza
 			completion_reward = {
@@ -2175,11 +2389,11 @@ focus_tree = {
 		icon = GFX_focus_generic_befriend_portugal
 		cost = 10.00
 		prerequisite = {
-			focus = Od_morza_do_morza
+			focus = Dalecy_sojusznicy
 		}
-		x = 1
+		x = 0
 		y = 1
-		relative_position_id = Od_morza_do_morza
+		relative_position_id = Dalecy_sojusznicy
 		completion_reward = {
 					if = {
 							limit = {
@@ -2202,89 +2416,7 @@ focus_tree = {
 						}
 					}
 		}
-	}
-	focus = {
-		id = Zaatakowanie_niedzwiedza
-		icon = GFX_focus_eng_expose_the_belly_of_the_bear
-		cost = 15.00
-		prerequisite = {
-			focus = Dalecy_sojusznicy
-			focus = Portugalia_z_nikad
-		}
-		x = 1
-		y = 1
-		relative_position_id = Dalecy_sojusznicy
-			completion_reward = {
-					create_wargoal = {
-							type = take_state_focus
-							target = SOV
-						}
-					199 = {
-							add_claim_by = SIL
-						}
-					201 = {
-							add_claim_by = SIL
-						}
-					198 = {
-							add_claim_by = SIL
-						}
-					192 = {
-							add_claim_by = SIL
-						}
-					766 = {
-							add_claim_by = SIL
-						}
-					192 = {
-							add_claim_by = SIL
-						}
-					197 = {
-							add_claim_by = SIL
-						}
-					203 = {
-							add_claim_by = SIL
-						}
-					259 = {
-							add_claim_by = SIL
-						}
-					225 = {
-							add_claim_by = SIL
-						}
-					193 = {
-							add_claim_by = SIL
-						}
-					221 = {
-							add_claim_by = SIL
-						}
-					228 = {
-							add_claim_by = SIL
-						}
-					227 = {
-							add_claim_by = SIL
-						}
-					200 = {
-							add_claim_by = SIL
-						}
-					196 = {
-							add_claim_by = SIL
-						}
-					194 = {
-							add_claim_by = SIL
-						}
-					241 = {
-							add_claim_by = SIL
-						}
-					206 = {
-							add_claim_by = SIL
-						}
-					204 = {
-							add_claim_by = SIL
-						}
-					207 = {
-							add_claim_by = SIL
-						}
-				}
-
-	}
+	}ear
 	focus = {
 		id = Okrety
 		icon = GFX_goal_generic_navy_battleship
@@ -3938,6 +4070,88 @@ focus = {
 	###################################
 	##Pozostalosc po pierwszej wersji##
 	###################################
+#	focus = {
+#		id = Zaatakowanie_niedzwiedza
+#		icon = GFX_focus_eng_expose_the_belly_of_the_b
+#		cost = 15.00
+#		prerequisite = {
+#			focus = Dalecy_sojusznicy
+#			focus = Portugalia_z_nikad
+#		}
+#		x = 1
+#		y = 1
+#		relative_position_id = Dalecy_sojusznicy
+#			completion_reward = {
+#					create_wargoal = {
+#							type = take_state_focus
+#							target = SOV
+#						}
+#					199 = {
+#							add_claim_by = SIL
+#						}
+#					201 = {
+#							add_claim_by = SIL
+#						}
+#					198 = {
+#							add_claim_by = SIL
+#						}
+#					192 = {
+#							add_claim_by = SIL
+#						}
+#					766 = {
+#							add_claim_by = SIL
+#						}
+#					192 = {
+#							add_claim_by = SIL
+#						}
+#					197 = {
+#							add_claim_by = SIL
+#						}
+#					203 = {
+#							add_claim_by = SIL
+#						}
+#					259 = {
+#							add_claim_by = SIL
+#						}
+#					225 = {
+#							add_claim_by = SIL
+#						}
+#					193 = {
+#							add_claim_by = SIL
+#						}
+#					221 = {
+#							add_claim_by = SIL
+#						}
+#					228 = {
+#							add_claim_by = SIL
+#						}
+#					227 = {
+#							add_claim_by = SIL
+#						}
+#					200 = {
+#							add_claim_by = SIL
+#						}
+#					196 = {
+#							add_claim_by = SIL
+#						}
+#					194 = {
+#							add_claim_by = SIL
+#						}
+#					241 = {
+#							add_claim_by = SIL
+#						}
+#					206 = {
+#							add_claim_by = SIL
+#						}
+#					204 = {
+#							add_claim_by = SIL
+#						}
+#					207 = {
+#							add_claim_by = SIL
+#						}
+#				}
+#
+#	}
 
 #	focus = {
 #		id = Niemieckie_porozumienie

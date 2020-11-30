@@ -776,6 +776,7 @@ country_event = {
 		MEX = {country_event = { id = silesia.13 }}
 	}
 }
+#Event na zmarionetkowanie mexyku lub przejecie
 country_event = {
 	id = Silesia.13
 	title = Silesia.13.t
@@ -843,6 +844,7 @@ country_event = {
 		}
 	}
 }
+#Wywolanie wojny na Litwie
 country_event = {
 	id = Silesia.15
 	title = Silesia.15.t
@@ -867,7 +869,107 @@ country_event = {
 		}
 	}
 }
+# Kupno madagaskaru
+country_event = {
+	id = Silesia.16
+	title = Silesia.16.t
+	desc = Silesia.16.d	
+	is_triggered_only = yes
+	option = {
+		name = silesia.16.a
+		ai_chance = { factor = 90 }
+		SIL = {
+			declare_war_on = {
+				target = LIT
+				type = take_state_focus
+				generator = { 11  189 }
+			}
+		}
+	}
+	option = {
+		name = silesia.16.b
+		ai_chance = { factor = 10 }
+		SIL = {
+			add_political_power = -300
+		}
+	}
+}
+#zgoda
+country_event = {
+	id = Silesia.17
+	title = Silesia.17.t
+	desc = Silesia.17.d	
+	is_triggered_only = yes
+	option = {
+		name = silesia.17.a
+		ai_chance = { factor = 90 }
+	}
+}
+#brak zgody
+country_event = {
+	id = Silesia.18
+	title = Silesia.18.t
+	desc = Silesia.18.d	
+	is_triggered_only = yes
+	option = {
+		name = silesia.18.a
+		ai_chance = { factor = 90 }
+	}
+}
 
+
+# Madagaskar albo wojna
+country_event = {
+	id = Silesia.19
+	title = Silesia.19.t
+	desc = Silesia.19.d	
+	is_triggered_only = yes
+	option = {
+		name = silesia.19.a
+		ai_chance = { factor = 40 }
+		SIL = {
+		}
+	}
+	option = {
+		name = silesia.19.b
+		ai_chance = { factor = 60 }
+		SIL = {
+		}
+	}
+}
+#zgoda
+country_event = {
+	id = Silesia.20
+	title = Silesia.20.t
+	desc = Silesia.20.d	
+	is_triggered_only = yes
+	option = {
+		name = silesia.20.a
+		ai_chance = { factor = 90 }
+		FRA = {
+			if = {
+			limit = { owns_state = 543 }
+			SIL = { transfer_state = 543 }
+			}
+		}
+	}
+}
+#wojna
+country_event = {
+	id = Silesia.21
+	title = Silesia.21.t
+	desc = Silesia.21.d	
+	is_triggered_only = yes
+	option = {
+		name = silesia.21.a
+		ai_chance = { factor = 90 }
+		create_wargoal = {
+			type = take_state_focus
+			target = FRA
+			generator = { 543 }
+		}
+	}
+}
 # Old events 
 #country_event = {
 #	id = silesia.1

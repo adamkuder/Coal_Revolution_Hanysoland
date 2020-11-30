@@ -406,7 +406,17 @@ ideas = {
 				research_speed_factor = 0.10
 			}
 		}
-			
+	Sil_Zaskakujaca_Agresja = {
+	allowed = {
+		always = no
+	}
+	picture = FRA_scw_intervention_nationalists_focus
+	removal_cost = -1
+	modifier = {
+			army_defence_factor = -0.20
+			mobilization_speed = -0.2
+		}
+	}
 	Sil_Target_Ger = {
 		allowed = {
 			always = no
