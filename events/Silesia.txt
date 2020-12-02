@@ -784,7 +784,25 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = silesia.13.a
-		ai_chance = { factor = 65 }
+		ai_chance = { factor = 50 }
+		SIL = {country_event = { id = silesia.23 }}
+	}
+	option = {
+		name = silesia.13.b
+		ai_chance = { factor = 50 }
+		GER = {
+			add_to_faction = MEX
+		}
+	}
+}
+country_event = {
+	id = Silesia.23
+	title = Silesia.23.t
+	desc = Silesia.23.d	
+	is_triggered_only = yes
+	option = {
+		name = silesia.23.a
+		ai_chance = { factor = 99 }
 		SIL = {
 			every_state = {
 					limit = {
@@ -803,13 +821,6 @@ country_event = {
 				transfer_troops = yes
 			}
 	}
-	option = {
-		name = silesia.13.b
-		ai_chance = { factor = 35 }
-		GER = {
-			add_to_faction = MEX
-		}
-	}
 }
 country_event = {
 	id = Silesia.14
@@ -820,21 +831,8 @@ country_event = {
 		name = silesia.14.a
 		ai_chance = { factor = 50 }
 		SIL = {
-			every_state = {
-					limit = {
-							is_core_of = LIT
-						}
-					add_core_of = SIL
-				}
+			country_event = { id = silesia.24 }
 		}
-		set_cosmetic_tag = SILMEX_F
-		set_country_flag = SILMEX_F
-		add_war_support = -0.05
-		add_stability = -0.05
-		SIL = {annex_country = {
-				target = LIT
-				transfer_troops = yes
-			}}
 	}
 	option = {
 		name = silesia.14.b
@@ -842,6 +840,28 @@ country_event = {
 		SIL = {
 			country_event = { id = silesia.15 }
 		}
+	}
+}
+country_event = {
+	id = Silesia.24
+	title = Silesia.24.t
+	desc = Silesia.24.d	
+	is_triggered_only = yes
+	option = {
+		name = silesia.24.a
+		ai_chance = { factor = 99 }
+		SIL = {
+		every_state = {
+					limit = {
+							is_core_of = LIT
+						}
+					add_core_of = SIL
+				}
+		}
+		SIL = {annex_country = {
+				target = LIT
+				transfer_troops = yes
+			}}
 	}
 }
 #Wywolanie wojny na Litwie
@@ -967,6 +987,28 @@ country_event = {
 			type = take_state_focus
 			target = FRA
 			generator = { 543 }
+		}
+	}
+}
+country_event = {
+	id = Silesia.22
+	title = Silesia.22.t
+	desc = Silesia.22.d	
+	is_triggered_only = yes
+	option = {
+		name = silesia.22.a
+		ai_chance = { factor = 90 }
+		SIL = {
+		declare_war_on = {
+				target = GER
+				type = take_state_focus
+				generator = { 65  64 62 63 68 }
+			}
+		}
+		GER = {
+			add_timed_idea = {
+				idea = Sil_Zaskakujaca_Agresja days = 90
+			}
 		}
 	}
 }

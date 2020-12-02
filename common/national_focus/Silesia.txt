@@ -1153,18 +1153,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = Dzialalnosc_antyNazistowska
 		completion_reward = {
-			SIL = {
-			declare_war_on = {
-					target = GER
-					type = take_state_focus
-					generator = { 42  51 }
-				}
-			}
-			GER = {
-				add_timed_idea = {
-					idea = Sil_Zaskakujaca_Agresja days = 90
-				}
-			}
+			country_event = silesia.22
 		}
 	}
 	focus = {
@@ -3217,7 +3206,7 @@ focus_tree = {
 				SIL= { 
 						create_wargoal = {
 									type = annex_everything
-									target = POL
+									target = USA
 							}
 					}
 		}
@@ -3252,7 +3241,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = AntyFaszyzm
 		completion_reward = {
-			###
+			SIL= { 
+			create_wargoal = {
+						type = annex_everything
+						target = USA
+				}
+		}
 		}
 	}
 	focus = {

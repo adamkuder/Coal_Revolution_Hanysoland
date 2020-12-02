@@ -46,9 +46,9 @@ add_ideas = {
 
 
 create_country_leader = {
-	name = "Adam Von Kuder"
-	desc = "Adam_Von_Kuder_DESC"
-	picture = "Portrait_Silesia_Adam_von_Kuder.dds"
+	name = "Helmuth_Bruckner"
+	desc = "Helmuth_Bruckner_DESC"
+	picture = "Portrait_Silesia_Helmuth_Bruckner.dds"
 	expire = "1965.1.1"
 	ideology = nazism
 	traits = {
@@ -56,9 +56,9 @@ create_country_leader = {
 	}
 }
 create_country_leader = {
-	name = "Przodowy"
-	desc = "Przodowy_DESC"
-	picture = "Portrait_Silesia_Przodowy.dds"
+	name = "Jozef_Kozdon"
+	desc = "Jozef_Kozdon_DESC"
+	picture = "Portrait_Silesia_Jozef_Kozdon.dds"
 	expire = "1965.1.1"
 	ideology = despotism
 	traits = { 
@@ -66,9 +66,19 @@ create_country_leader = {
 		}
 }
 create_country_leader = {
-	name = "Czerwono_Frela"
-	desc = "Czerwono_Frela_DESC"
-	picture = "Portrait_Silesia_Czerwono_Frela.dds"
+	name = "Wojciech_Korfanty"
+	desc = "Wojciech_Korfanty_DESC"
+	picture = "Portrait_Silesia_Wojciech_Korfanty.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = { 
+		captain_of_industry The Gentleman_President Tenacious_Negotiator Revolutionary_General
+		}
+}
+create_country_leader = {
+	name = "Jozef_Wieczorek"
+	desc = "Jozef_Wieczorek_DESC"
+	picture = "Portrait_Silesia_Jozef_Wieczorek.dds"
 	expire = "1965.1.1"
 	ideology = leninism
 	traits = { 
