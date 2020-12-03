@@ -1177,7 +1177,7 @@ focus_tree = {
 	}
 	focus = {
 		id = Podubdka_Marynarki
-		icon = GFX_focus_generic_self_management
+		icon = GFX_focus_generic_africa_naval
 		cost = 10.00
 		prerequisite = {
 			focus = Ujednolicenie_Prawa
@@ -1191,7 +1191,7 @@ focus_tree = {
 	}
 	focus = {
 		id = Domagajmy_sie_koloni
-		icon = GFX_focus_generic_self_management
+		icon = GFX_focus_hol_war_on_pacifism
 		cost = 10.00
 		prerequisite = {
 			focus = Podubdka_Marynarki
@@ -1204,7 +1204,7 @@ focus_tree = {
 	}
 	focus = {
 		id = Kupno_madagaskaru
-		icon = GFX_focus_generic_self_management
+		icon = GFX_focus_hol_the_foundations_of_defense
 		cost = 10.00
 		prerequisite = {
 			focus = Domagajmy_sie_koloni
@@ -1220,7 +1220,7 @@ focus_tree = {
 	}
 	focus = {
 		id = Madagaskar_albo_wojna
-		icon = GFX_focus_generic_self_management
+		icon = GFX_focus_spr_anarchism_knows_no_borders
 		cost = 10.00
 		prerequisite = {
 			focus = Domagajmy_sie_koloni
@@ -1289,7 +1289,7 @@ focus_tree = {
 	}
 	focus = {
 		id = Dzialalnosc_antyKomunistowska
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_generic_dangerous_deal
 		cost = 10.00
 		prerequisite = {
 			focus = Ukrainskie_Dymy
@@ -1306,7 +1306,7 @@ focus_tree = {
 	}
 	focus = {
 		id = Przygotowanie_do_wojny_z_ZSSR
-		icon = GFX_focus_generic_self_management
+		icon = GFX_focus_ger_bulwark_against_bolshevism
 		cost = 10.00
 		prerequisite = {
 			focus = Dzialalnosc_antyKomunistowska
@@ -1319,7 +1319,7 @@ focus_tree = {
 	}
 	focus = {
 		id = Swiatlo_na_Syberii
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_anti_comintern_pact
 		cost = 20.00
 		prerequisite = {
 			focus = Koniec_Zwiazku_radzieckiego
@@ -1333,7 +1333,7 @@ focus_tree = {
 
 	focus = {
 		id = Koniec_Zwiazku_radzieckiego
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_generic_war_with_comintern
 		cost = 10.00
 		prerequisite = {
 			focus = Przygotowanie_do_wojny_z_ZSSR
@@ -3106,9 +3106,9 @@ focus_tree = {
 		y = 2
 		relative_position_id = Wspolna_granica_SIL_SOV
 		completion_reward = {
-			SIL = { limit ={has_war = NOT} 
 
-			}
+
+			
 		}
 	}
 	focus = {

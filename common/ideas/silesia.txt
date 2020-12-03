@@ -333,7 +333,7 @@ ideas = {
 			always = no
 		}
 		removal_cost = -1
-		picture = generic_democratic_drift_bonus
+		picture = tur_coordinated_balkan_armed_forces
 		modifier = {
 			monthly_population = 0.25
 		}
@@ -366,7 +366,7 @@ ideas = {
 					always = no
 				}
         	    removal_cost = -1
-        	    picture = generic_research_bonus
+        	    picture = generic_build_infrastructure
         	    modifier = {
 					production_speed_infrastructure_factor = 0.10
 					production_speed_buildings_factor = 0.15
@@ -378,7 +378,7 @@ ideas = {
 					always = no
 				}
 	    	    removal_cost = -1
-				picture = generic_production_bonus
+				picture = generic_central_management
 				modifier = {
 					production_speed_buildings_factor = 0.3
 				}
@@ -389,7 +389,7 @@ ideas = {
 					always = no
 				}
 			    removal_cost = -1
-				picture = generic_production_bonus
+				picture = generic_fortify_the_borders
 				modifier = {
 					production_speed_buildings_factor = 0.3
 				}
@@ -400,7 +400,7 @@ ideas = {
 				always = no
 			}
 		    removal_cost = -1
-			picture = generic_production_bonus
+			picture = generic_research_bonus
 			modifier = {
 				#refit_speed = 0.2
 				research_speed_factor = 0.10
@@ -410,7 +410,7 @@ ideas = {
 	allowed = {
 		always = no
 	}
-	picture = FRA_scw_intervention_nationalists_focus
+	picture = saf_ossewabrandwag_fascism
 	removal_cost = -1
 	modifier = {
 			army_defence_factor = -0.20
@@ -421,7 +421,7 @@ ideas = {
 		allowed = {
 			always = no
 		}
-		picture = FRA_scw_intervention_nationalists_focus
+		picture = SPR_anti_fascist_crusade
 		removal_cost = -1
 		targeted_modifier = {
 			tag = GER
@@ -433,7 +433,7 @@ ideas = {
 		allowed = {
 			always = no
 		}
-		picture = FRA_scw_intervention_nationalists_focus
+		picture = anti_soviet_pact
 		removal_cost = -1
 		targeted_modifier = {
 			tag = SOV
@@ -445,7 +445,7 @@ ideas = {
 		allowed = {
 			always = no
 		}
-		picture = FRA_scw_intervention_nationalists_focus
+		picture = eng_guided_by_britain
 		removal_cost = -1
 		targeted_modifier = {
 			tag = ENG
@@ -457,7 +457,7 @@ ideas = {
 		allowed = {
 			always = no
 		}
-		picture = FRA_scw_intervention_nationalists_focus
+		picture = MEX_callistas
 		removal_cost = -1
 		targeted_modifier = {
 			tag = USA
@@ -487,7 +487,7 @@ ideas = {
 	}
 	SIL_Koszty_Zjednoczenia = {
 		name = SIL_Koszty_Zjednoczenia
-		picture = chi_army_corruption
+		picture = chi_army_corruption2
 		modifier = {
 				army_attack_factor = -0.15
 				training_time_army_factor = 0.1
@@ -495,7 +495,7 @@ ideas = {
 	}
 	SIL_Nocne_Wilki = {
 		name = SIL_Nocne_Wilki
-		picture = chi_army_corruption
+		picture = air_war_plans_division_focus
 		modifier = {
 			air_attack_factor = 0.1
 			air_night_penalty = -0.1
@@ -503,14 +503,14 @@ ideas = {
 	}
 	SIL_Organization = {
 		name = SIL_Organization
-		picture = chi_army_corruption
+		picture = eng_service_overseas
 		modifier = {
 			army_org_factor = 0.1
 		}
 	}
 	SIL_Wielonarodowosc= {
 		name = SIL_Wielonarodowosc
-		picture = chi_army_corruption
+		picture = hol_expand_the_colonial_army
 		modifier = {
 			stability_weekly_factor = 0.005
 			war_support_weekly_factor = 0.0025
@@ -519,23 +519,30 @@ ideas = {
 	}
 	SIL_production_factory = {
 		name = SIL_production_factory
-		picture = chi_army_corruption
+		picture = man_five_year_plan_industry
 		modifier = {
 			production_factory_max_efficiency_factor = 0.1
 		}
 	}
 	SIL_volunteers = {
-	name = SIL_production_factory
-	picture = chi_army_corruption
+	name = SIL_volunteers
+	picture = ast_volunteer_defence_corps
 	modifier = {
 		send_volunteers_tension = -0.5
 		send_volunteer_size = 5
 	}
 	SIL_sila_zjednoczenia = {
-	name = SIL_production_factory
-	picture = chi_army_corruption
+	name = SIL_sila_zjednoczenia
+	picture = idea_generic_oppression
 	modifier = {
 		non_core_manpower = 0.1
+	}
+	SIL_Gotowi_na_wojne_z_ZSSR= {
+		name = SIL_Gotowi_na_wojne_z_ZSSR
+		picture = idea_generic_flexible_foreign_policy2
+		modifier = {
+			supply_consumption_factor = 0.2
+		}
 	}
 }
 	

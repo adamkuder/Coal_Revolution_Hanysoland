@@ -1012,6 +1012,24 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = Silesia.25
+	title = Silesia.25.t
+	desc = Silesia.25.d	
+	is_triggered_only = yes
+	option = {
+		name = silesia.25.a
+		ai_chance = { factor = 90 }
+		
+		SIL = {
+			declare_war_on = {
+				target = SOV
+				type = take_state_focus
+				generator = { 207  206 204 194 201 198 192 203 202 241 210 225 259 226 197 196 200 137}
+			}
+		}
+	}
+}
 # Old events 
 #country_event = {
 #	id = silesia.1
