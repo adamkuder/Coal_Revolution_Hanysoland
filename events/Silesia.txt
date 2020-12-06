@@ -897,21 +897,15 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = silesia.16.a
-		ai_chance = { factor = 90 }
+		ai_chance = { factor = 65 }
 		SIL = {
-			declare_war_on = {
-				target = LIT
-				type = take_state_focus
-				generator = { 11  189 }
-			}
+			country_event = { id = Silesia.17 }
 		}
 	}
 	option = {
 		name = silesia.16.b
-		ai_chance = { factor = 10 }
-		SIL = {
-			add_political_power = -300
-		}
+		ai_chance = { factor = 35 }
+		country_event = { id = Silesia.18 }
 	}
 }
 #zgoda
@@ -923,6 +917,12 @@ country_event = {
 	option = {
 		name = silesia.17.a
 		ai_chance = { factor = 90 }
+		FRA = {
+			if = {
+			limit = { owns_state = 543 }
+			SIL = { transfer_state = 543 }
+			}
+		}
 	}
 }
 #brak zgody
@@ -947,13 +947,14 @@ country_event = {
 	option = {
 		name = silesia.19.a
 		ai_chance = { factor = 40 }
-		SIL = {
+		SIL = { country_event = { id = Silesia.20 }
 		}
 	}
 	option = {
 		name = silesia.19.b
 		ai_chance = { factor = 60 }
 		SIL = {
+			country_event = { id = Silesia.21 }
 		}
 	}
 }
@@ -1026,6 +1027,23 @@ country_event = {
 				target = SOV
 				type = take_state_focus
 				generator = { 207  206 204 194 201 198 192 203 202 241 210 225 259 226 197 196 200 137}
+			}
+		}
+	}
+}
+#Morawia dla slaska
+country_event = {
+	id = Silesia.26
+	title = Silesia.26.t
+	desc = Silesia.26.d	
+	is_triggered_only = yes
+	option = {
+		name = silesia.26.a
+		ai_chance = { factor = 90 }
+		GER = {
+			if = {
+			limit = { owns_state = 75 }
+			SIL = { transfer_state = 75 }
 			}
 		}
 	}

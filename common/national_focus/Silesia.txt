@@ -1054,20 +1054,6 @@ focus_tree = {
 				}
 	}
 	focus = {
-		id = Nowe_metody_Umocnien 
-		icon = GFX_goal_generic_fortify_city
-		cost = 5.00
-		prerequisite = {
-			focus = Ochotnicy
-		}
-		x = 0
-		y = 1
-		relative_position_id = Ochotnicy
-		completion_reward = {
-			add_ideas = FRA_fortification_focus
-		}
-	}
-	focus = {
 		id = Sila_zjednoczenia
 		icon = GFX_focus_RAJ_indian_gentlemen_offcers
 		cost = 5.00
@@ -1120,6 +1106,20 @@ focus_tree = {
 		relative_position_id = Handel_zagraniczny
 		completion_reward = {
 			add_ideas = SIL_volunteers
+		}
+	}
+	focus = {
+		id = Nowe_metody_Umocnien 
+		icon = GFX_goal_generic_fortify_city
+		cost = 5.00
+		prerequisite = {
+			focus = Ochotnicy
+		}
+		x = 0
+		y = 1
+		relative_position_id = Ochotnicy
+		completion_reward = {
+			add_ideas = FRA_fortification_focus
 		}
 	}
 	focus = {
@@ -1186,7 +1186,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = Ujednolicenie_Prawa
 		completion_reward = {
-
+			add_stability = 0.10
 		}
 	}
 	focus = {
@@ -1216,6 +1216,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = Domagajmy_sie_koloni
 		completion_reward = {
+			country_event = { id = Silesia.16 }
 		}
 	}
 	focus = {
@@ -1232,6 +1233,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = Domagajmy_sie_koloni
 		completion_reward = {
+			country_event = { id = Silesia.19 }
 		}
 	}
 	focus = {
@@ -1318,20 +1320,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = Swiatlo_na_Syberii
-		icon = GFX_goal_anti_comintern_pact
-		cost = 20.00
-		prerequisite = {
-			focus = Koniec_Zwiazku_radzieckiego
-				}
-		x = 0
-		y = 1
-		relative_position_id = Koniec_Zwiazku_radzieckiego
-		completion_reward = { 
-		}
-	}
-
-	focus = {
 		id = Koniec_Zwiazku_radzieckiego
 		icon = GFX_goal_generic_war_with_comintern
 		cost = 10.00
@@ -1345,6 +1333,19 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = Swiatlo_na_Syberii
+		icon = GFX_goal_anti_comintern_pact
+		cost = 20.00
+		prerequisite = {
+			focus = Koniec_Zwiazku_radzieckiego
+				}
+		x = 0
+		y = 1
+		relative_position_id = Koniec_Zwiazku_radzieckiego
+		completion_reward = { 
+		}
+	}
+	focus = {
 		id = Od_morza_do_morza
 		icon = GFX_focus_invite_romania
 		cost = 10.00
@@ -1355,7 +1356,7 @@ focus_tree = {
 			focus = Rozwazenie_iterwencji
 		}
 		mutually_exclusive = {
-			focus = RozbiorRumuni
+			focus = Rozbior_Rumuni
 		}
 		x = 1
 		y = 2
@@ -1719,6 +1720,11 @@ focus_tree = {
 		id = Moravia_dla_Slaska 
 		icon = GFX_goal_anschluss
 		cost = 10.00
+		available = {
+			GER= {
+				controls_state = 75
+			}
+		}
 		prerequisite = {
 			focus = W_strone_OSI
 		}
@@ -1726,7 +1732,7 @@ focus_tree = {
 		x = 1
 		y = 1
 			completion_reward = {
-					#
+					country_event = { id = Silesia.26 }
 				}
 	}
 	focus = {
@@ -2405,7 +2411,7 @@ focus_tree = {
 						}
 					}
 		}
-	}ear
+	}
 	focus = {
 		id = Okrety
 		icon = GFX_goal_generic_navy_battleship
@@ -2438,7 +2444,6 @@ focus_tree = {
 								}
 						}
 				}
-
 	}
 	focus = {
 		id = Koniec_problemow

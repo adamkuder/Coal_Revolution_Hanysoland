@@ -72,7 +72,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = liberalism
 	traits = { 
-		captain_of_industry The Gentleman_President Tenacious_Negotiator Revolutionary_General
+		captain_of_industry The_Gentleman_President Tenacious_Negotiator Revolutionary_General
 		}
 }
 create_country_leader = {

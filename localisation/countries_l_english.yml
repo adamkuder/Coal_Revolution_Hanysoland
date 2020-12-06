@@ -3173,12 +3173,4 @@
  vojvodina:0 "Vojvodina"
  vojvodina_DEF:0 "Vojvodina"
  vojvodina_ADJ:0 "Vojvodinian"
-######
- SIL_fascism:0 "Silesia"
- SIL_democratic:0 "Silesia"
- SIL_neutrality:0 "Silesia"
- SIL_communism:0 "Silesia"
- SILPOL_neutrality:0 "Condominum Siliesian-Polish"
- SILPOL_communism:0 "Red Siliesian-Polish"
- SILPOL_democratic:0 "Republic Siliesian-Polish"
- SILPOL_fascism:0 "Empire Siliesian-Polish" 
+ 

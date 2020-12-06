@@ -213,10 +213,10 @@
  germany.85.t:0 "[From.GetName] wzywa sojuszników na pomoc"
  germany.85.t.a:0 "[From.GetName] wzywa sojuszników na pomoc"
  germany.85.t.b:0 "[From.GetName] powołuje się na gwarancje"
- germany.85.d:0 "Sygnatariusze paktu antysowieckiego zobowiązani są przyjść z pomocą sojusznikowi zaatakowanemu przez ZSRR. [From.GetName] prowadzi wojnę obronną przeciw Sowietom i wzywa pozostałych członków koalicji do zapewnienia natychmiastowego wsparcia. Pora pokazać całemu światu, że jesteśmy gotowi stanąć do walki ze Związkiem Radzieckim."
+ germany.85.d:0 "Sygnatariusze paktu antysowieckiego zobowiązani są przyjść z pomocą sojusznikowi zaatakowanemu przez ZSRR. [From.GetName] prowadzi wojnę obronną przeciw Sowietom i wzywa pozostałych członków koalicji do zapewnienia natychmiastowego wsparcia. Pora pokazać całemu światu, że jesteśmy gotowi stanąć do walki ze Związkiem Radzieckim." # [LocEditor:AwaitingBatchUpdate]
  germany.85.desc.a:0 "Sygnatariusze paktu antysowieckiego zobowiązani są przyjść z pomocą sojusznikowi zaatakowanemu przez ZSRR. [From.GetName] prowadzi wojnę obronną przeciw Sowietom i wzywa pozostałych członków koalicji do zapewnienia natychmiastowego wsparcia. Pora pokazać całemu światu, że jesteśmy gotowi stanąć do walki ze Związkiem Radzieckim."
  germany.85.desc.b:0 "[From.GetNameDef] ma od nas gwarancje, które zobowiązują nas do przyjścia z pomocą sojusznikowi zaatakowanemu przez ZSRR. Obecnie kraj ten prowadzi wojnę obronną przeciw Sowietom i nadszedł czas, żebyśmy dotrzymali umowy i przyszli mu z pomocą. Pora pokazać całemu światu, że jesteśmy gotowi stanąć do walki ze Związkiem Radzieckim."
- germany.85.a:0 "[From.GetName] nie walczy samotnie"
+ germany.85.a:0 "[From.GetName] nie walczy samotnie" # [LocEditor:AwaitingBatchUpdate]
  germany.85.b:0 "To nie nasza wojna"
  germany.85.b_tt:0 "§YZostanie to uznane za zdradę przez wszystkie kraje honorujące ten pakt (§!§R-50§!§Y do opinii).§!"
  germany.86.t:0 "Gdańsk albo wojna"
@@ -810,7 +810,7 @@
  usa.13.a:0 "To koniec pewnej ery i początek nowej."
  news.1.t:0 "Incydent na moście Marco Polo"
  news.1.d:0 "Japońskie i chińskie oddziały starły się ze sobą na moście Marco Polo, położonym na południowy zachód od Pekinu. Żadna ze stron nie okazała się silniejsza. Żądania Japończyków, którzy domagali się przeprosin i ustępstw terytorialnych, zostały odrzucone, a Chińczycy oświadczyli, że sytuacja osiągnęła punkt wrzenia. Zdaniem dyplomatów lada dzień może dojść do wybuchu wojny."
- news.1.a:0 "To rzeczywiście ciekawe czasy."
+ news.1.a:0 "To rzeczywiście ciekawe czasy." # [LocEditor:AwaitingBatchUpdate]
  news.1.b:0 "Już my pokażemy tym Chińczykom!"
  news.1.c:0 "Tak jest! Żadnych ustępstw!"
  news.2.d:0 "Japońskie i chińskie oddziały starły się ze sobą na moście Marco Polo, położonym na południowy zachód od Pekinu. Żadna ze stron nie okazała się silniejsza. Chińczycy przyznali się do odpowiedzialności za ten incydent, wysłali oficjalne przeprosiny i wyrazili zgodę na znaczne ustępstwa terytorialne. Zaskoczyło to wielu ekspertów, którzy podejrzewali, że zamieszki na granicy przerodzą się w wojnę. Czyżby w Azji miał zapanować pokój?"
@@ -917,7 +917,7 @@
  news.25.t:0 "Remilitaryzacja Nadrenii"
  news.25.d:0 "Niemcy przerzucili wojska do Nadrenii, w pobliże granicy z Francją, co jest jawnym pogwałceniem traktatu wersalskiego. Mieszkańcy regionu serdecznie powitali żołnierzy, a Francja i Wielka Brytania zareagowały dość spokojnie.\n\nPewien brytyjski obserwator stwierdził nawet, że "Niemcy po prostu spacerują po własnym podwórku"."
  news.25.a:0 "To niepokojące."
- news.25.b:0 "To terytorium Niemiec."
+ news.25.b:0 "To terytorium Niemiec." # [LocEditor:AwaitingBatchUpdate]
  news.25.c:0 "Musimy wzmocnić naszą granicę."
  news.25.e:0 "Na pewno nie ma się czym przejmować."
  news.26.d:0 "Niemcy przerzucili wojska do Nadrenii, w pobliże granicy z Francją, co jest jawnym pogwałceniem traktatu wersalskiego.\n\nFrancuzi i Brytyjczycy zareagowali bardzo gwałtownie, oskarżając Niemców o "niewybaczalne naruszenie" pokoju podpisanego po wielkiej wojnie. Oba kraje rozpoczęły mobilizację i szykują się do inwazji. W Europie znów wybuchła wojna!"
@@ -1023,7 +1023,7 @@
  news.55.e:0 "Niemcy nie odważą się zaatakować!"
  news.55.f:0 "Nie opuścimy naszych sojuszników."
  news.56.t:0 "Układ monachijski"
- news.56.d:0 "Niemcy coraz mocniej naciskają, by przekazać im Kraj Sudetów w Czechosłowacji, zamieszkany w dużej części przez ludność niemieckojęzyczną. \n\nNa konferencji w Monachium przedstawiciele Rzeszy, Wielkiej Brytanii, Francji i Włoch próbowali znaleźć dyplomatyczne rozwiązanie tak zwanego "kryzysu sudeckiego". Czechosłowacja nie została zaproszona do udziału w rozmowach. Ustalono, że władze w Berlinie otrzymają sporne ziemie, ale nie będą zgłaszać kolejnych roszczeń terytorialnych w Europie.\n\nPremier Chamberlain, przemawiając do tłumu w Londynie, powiedział:\n"Po raz drugi premier powrócił z Niemiec, przywożąc honorowy pokój. Uważam, że jest to pokój po wsze czasy"."
+ news.56.d:0 "Niemcy coraz mocniej naciskają, by przekazać im Kraj Sudetów w Czechosłowacji, zamieszkany w dużej części przez ludność niemieckojęzyczną. \n\nNa konferencji w Monachium przedstawiciele Rzeszy, Wielkiej Brytanii, Francji i Włoch próbowali znaleźć dyplomatyczne rozwiązanie tak zwanego "kryzysu sudeckiego". Czechosłowacja nie została zaproszona do udziału w rozmowach. Ustalono, że władze w Berlinie otrzymają sporne ziemie, ale nie będą zgłaszać kolejnych roszczeń terytorialnych w Europie.\n\nPremier Chamberlain, przemawiając do tłumu w Londynie, powiedział:\n"Po raz drugi premier powrócił z Niemiec, przywożąc honorowy pokój. Uważam, że jest to pokój po wsze czasy"." # [LocEditor:AwaitingBatchUpdate]
  news.56.a:0 "No cóż, w tym roku nie będzie wojny."
  news.56.b:0 "To tylko chwilowy pokój..."
  news.56.c:0 "Uniknęliśmy kolejnej wojny światowej."
@@ -1061,7 +1061,7 @@
  news.63.b:0 "Ku zwycięstwu!"
  news.64.t:0 "Koniec hiszpańskiej wojny domowej"
  news.64.d:0 "Wraz z upadkiem ostatnich punktów oporu wojsk republikańskich wojna domowa dobiegła końca. Nacjonaliści zwyciężyli, a w historii Hiszpanii rozpoczęła się nowa epoka. Kraj bardzo ucierpiał wskutek ciężkich walk i nadszedł czas na wielką odbudowę."
- news.64.a:0 "Ciekawy rozwój wypadków."
+ news.64.a:0 "Ciekawy rozwój wypadków." # [LocEditor:AwaitingBatchUpdate]
  news.64.b:0 "Pora wyleczyć wojenne rany."
  news.65.a:0 "Hiszpania może świętować."
  news.65.d:0 "Wraz z kapitulacją ostatnich oddziałów nacjonalistycznych wojna domowa dobiegła końca. Republikanie zwyciężyli, a w historii Hiszpanii rozpoczęła się nowa epoka. Kraj bardzo ucierpiał wskutek ciężkich walk i nadszedł czas na wielką odbudowę."
@@ -1237,42 +1237,42 @@
  news.161.c:0 "Możliwe, że trzeba to było zrobić."
  news.161.e:0 "Nie było innego wyjścia."
  news.162.d:0 "Traktat pokojowy, dzielący Hiszpanię na dwie części, zakończył wojnę domową. Po obu stronach słychać co prawda sprzeciw wobec tego kompromisu, ale rozejm, choćby tylko chwilowy, umożliwi Hiszpanom odzyskanie sił i odbudowę zniszczeń."
- news.162.a:0 "Hiszpanie mogą świętować."
+ news.162.a:0 "Hiszpanie mogą świętować." # [LocEditor:AwaitingBatchUpdate]
  news.162.b:0 "Pewnego dnia podbijemy całą Hiszpanię."
  news.163.t:0 "Konferencja londyńska"
- news.163.d:0 "[GER.GetName], wykorzystując aneksję Austrii jako podstawę swoich roszczeń, zażądali "prawowitego zwrotu" dawnego austriackiego terytorium Słowenii, którego właścicielem jest obecnie [YUG.GetName]. \n\nW odpowiedzi sygnatariusze traktatu wersalskiego zebrali się w Londynie, żeby omówić rozwiązanie "kwestii słoweńskiej". Podczas tej wielkiej konferencji pokojowej postanowiono, że Jugosławia powinna oddać Niemcom Słowenię w imię trwałego pokoju.\n\nRząd, na czele którego stoi [YUG.GetLeader], czuje się opuszczony przez wielkie europejskie mocarstwa i nie widzi innego wyjścia jak podpisanie proponowanej umowy."
+ news.163.d:0 "[GER.GetName], wykorzystując aneksję Austrii jako podstawę swoich roszczeń, zażądali "prawowitego zwrotu" dawnego austriackiego terytorium Słowenii, którego właścicielem jest obecnie [YUG.GetName]. \n\nW odpowiedzi sygnatariusze traktatu wersalskiego zebrali się w Londynie, żeby omówić rozwiązanie "kwestii słoweńskiej". Podczas tej wielkiej konferencji pokojowej postanowiono, że Jugosławia powinna oddać Niemcom Słowenię w imię trwałego pokoju.\n\nRząd, na czele którego stoi [YUG.GetLeader], czuje się opuszczony przez wielkie europejskie mocarstwa i nie widzi innego wyjścia jak podpisanie proponowanej umowy." # [LocEditor:AwaitingBatchUpdate]
  news.163.a:0 "To się dobrze skończy."
  news.163.b:0 "Sprawiedliwość"
  news.163.c:0 "Pożałowania godne"
  news.163.e:0 "Zdradzeni"
  news.164.t:0 "Kryzys w Słowenii"
- news.164.d:0 "[GER.GetName], wykorzystując aneksję Austrii jako podstawę swoich roszczeń, zażądali "prawowitego zwrotu" dawnego austriackiego terytorium Słowenii, którego właścicielem jest obecnie [YUG.GetName]. \n\nW odpowiedzi sygnatariusze traktatu wersalskiego zebrali się w Londynie, żeby omówić rozwiązanie "kwestii słoweńskiej".\n\nPodczas konferencji Wielka Brytania i Francja zaprezentowały wspólny front wobec niemieckich żądań i stwierdziły, że Jugosławia musi zachować granice ustalone przez traktat wersalski."
- news.164.d_FRA_abandoned_yugoslavia:0 "[GER.GetName], wykorzystując aneksję Austrii jako podstawę swoich roszczeń, zażądali "prawowitego zwrotu" dawnego austriackiego terytorium Słowenii, którego właścicielem jest obecnie [YUG.GetName]. \n\nW odpowiedzi sygnatariusze traktatu wersalskiego zebrali się w Londynie, żeby omówić rozwiązanie "kwestii słoweńskiej".\n\nWielka Brytania naciskała na utrzymanie ustaleń traktatu wersalskiego, ale Francja poparła niemieckie roszczenia w imię pokoju w Europie."
+ news.164.d:0 "[GER.GetName], wykorzystując aneksję Austrii jako podstawę swoich roszczeń, zażądali "prawowitego zwrotu" dawnego austriackiego terytorium Słowenii, którego właścicielem jest obecnie [YUG.GetName]. \n\nW odpowiedzi sygnatariusze traktatu wersalskiego zebrali się w Londynie, żeby omówić rozwiązanie "kwestii słoweńskiej".\n\nPodczas konferencji Wielka Brytania i Francja zaprezentowały wspólny front wobec niemieckich żądań i stwierdziły, że Jugosławia musi zachować granice ustalone przez traktat wersalski." # [LocEditor:AwaitingBatchUpdate]
+ news.164.d_FRA_abandoned_yugoslavia:0 "[GER.GetName], wykorzystując aneksję Austrii jako podstawę swoich roszczeń, zażądali "prawowitego zwrotu" dawnego austriackiego terytorium Słowenii, którego właścicielem jest obecnie [YUG.GetName]. \n\nW odpowiedzi sygnatariusze traktatu wersalskiego zebrali się w Londynie, żeby omówić rozwiązanie "kwestii słoweńskiej".\n\nWielka Brytania naciskała na utrzymanie ustaleń traktatu wersalskiego, ale Francja poparła niemieckie roszczenia w imię pokoju w Europie." # [LocEditor:AwaitingBatchUpdate]
  news.164.a:0 "Wydaje mi się, że to oznacza wojnę."
  news.164.b:0 "Poznają nasz gniew."
  news.164.c:0 "Staniemy po stronie sprawiedliwości."
  news.164.e:0 "Zawsze gotowi do walki!"
  news.164.f:0 "Brytyjczycy to głupcy."
  news.165.t:0 "Kryzys w Słowenii"
- news.165.d:0 "[GER.GetName], wykorzystując aneksję Austrii jako podstawę swoich roszczeń, zażądali "prawowitego zwrotu" dawnego austriackiego terytorium Słowenii, którego właścicielem jest obecnie [YUG.GetName]. \n\nW odpowiedzi sygnatariusze traktatu wersalskiego zebrali się w Londynie, żeby omówić rozwiązanie "kwestii słoweńskiej".\n\nMimo wielodniowych negocjacji na konferencji nie osiągnięto porozumienia. Rząd brytyjski szukał pokojowego rozwiązania, ale Francja nie ugięła się mimo niemieckich gróźb. Na znak protestu niemiecka delegacja opuściła konferencję, a nad Słowenią unosi się widmo wojny."
+ news.165.d:0 "[GER.GetName], wykorzystując aneksję Austrii jako podstawę swoich roszczeń, zażądali "prawowitego zwrotu" dawnego austriackiego terytorium Słowenii, którego właścicielem jest obecnie [YUG.GetName]. \n\nW odpowiedzi sygnatariusze traktatu wersalskiego zebrali się w Londynie, żeby omówić rozwiązanie "kwestii słoweńskiej".\n\nMimo wielodniowych negocjacji na konferencji nie osiągnięto porozumienia. Rząd brytyjski szukał pokojowego rozwiązania, ale Francja nie ugięła się mimo niemieckich gróźb. Na znak protestu niemiecka delegacja opuściła konferencję, a nad Słowenią unosi się widmo wojny." # [LocEditor:AwaitingBatchUpdate]
  news.165.a:0 "Perspektywy są ponure."
  news.165.b:0 "Nie ustąpimy."
  news.165.c:0 "Przykre."
  news.165.e:0 "Razem zwyciężymy!"
  news.165.f:0 "Zrobimy, co należy!"
  news.166.t:0 "Porozumienie londyńskie"
- news.166.d:0 "[GER.GetName], wykorzystując aneksję Austrii jako podstawę swoich roszczeń, zażądali "prawowitego zwrotu" dawnego austriackiego terytorium Słowenii, którego właścicielem jest obecnie [YUG.GetName]. \n\nW odpowiedzi sygnatariusze traktatu wersalskiego zebrali się w Londynie, żeby omówić rozwiązanie "kwestii słoweńskiej".\n\nW nadziei na uratowanie pokoju mocarstwa zgodziły się, że Słowenia powinna trafić do Niemiec. \nJednak w natchnionym przemówieniu przeciwko niemieckiemu zagrożeniu dla stabilności Europy [YUG.GetLeader] ogłasza jednoznacznie, że [YUG.GetName] nie odda choćby skrawka ziemi, chociaż nikt nie pomaga im w trudnych chwilach."
+ news.166.d:0 "[GER.GetName], wykorzystując aneksję Austrii jako podstawę swoich roszczeń, zażądali "prawowitego zwrotu" dawnego austriackiego terytorium Słowenii, którego właścicielem jest obecnie [YUG.GetName]. \n\nW odpowiedzi sygnatariusze traktatu wersalskiego zebrali się w Londynie, żeby omówić rozwiązanie "kwestii słoweńskiej".\n\nW nadziei na uratowanie pokoju mocarstwa zgodziły się, że Słowenia powinna trafić do Niemiec. \nJednak w natchnionym przemówieniu przeciwko niemieckiemu zagrożeniu dla stabilności Europy [YUG.GetLeader] ogłasza jednoznacznie, że [YUG.GetName] nie odda choćby skrawka ziemi, chociaż nikt nie pomaga im w trudnych chwilach." # [LocEditor:AwaitingBatchUpdate]
  news.166.a:0 "Światła gasną."
  news.166.b:0 "Zmiażdżymy ich."
  news.166.c:0 "Jesteśmy sami."
  news.167.t:0 "Kryzys w Słowenii"
- news.167.d:0 "[GER.GetName], wykorzystując aneksję Austrii jako podstawę swoich roszczeń, zażądali "prawowitego zwrotu" dawnego austriackiego terytorium Słowenii, którego właścicielem jest obecnie [YUG.GetName]. \n\nW odpowiedzi sygnatariusze traktatu wersalskiego zebrali się w Londynie, żeby omówić rozwiązanie "kwestii słoweńskiej".\n\nNa konferencji doszło do niespodziewanej zmiany frontów, ponieważ Włochy poparły terytorialną nietykalność Jugosławii, przez co niemieckie roszczenia zostały odrzucone. \n\nJak zawsze włoska polityka zagraniczna okazała się kompletnie nieprzewidywalna, trudno powiedzieć, co Włochy zyskają dzięki tej zagrywce."
+ news.167.d:0 "[GER.GetName], wykorzystując aneksję Austrii jako podstawę swoich roszczeń, zażądali "prawowitego zwrotu" dawnego austriackiego terytorium Słowenii, którego właścicielem jest obecnie [YUG.GetName]. \n\nW odpowiedzi sygnatariusze traktatu wersalskiego zebrali się w Londynie, żeby omówić rozwiązanie "kwestii słoweńskiej".\n\nNa konferencji doszło do niespodziewanej zmiany frontów, ponieważ Włochy poparły terytorialną nietykalność Jugosławii, przez co niemieckie roszczenia zostały odrzucone. \n\nJak zawsze włoska polityka zagraniczna okazała się kompletnie nieprzewidywalna, trudno powiedzieć, co Włochy zyskają dzięki tej zagrywce." # [LocEditor:AwaitingBatchUpdate]
  news.167.a:0 "Będziemy przyglądać się tej sytuacji."
  news.167.b:0 "Zmiażdżymy oba te kraje."
  news.167.c:0 "Przynajmniej mamy przyjaciół."
  news.167.e:0 "Włochy pokażą światu!"
  news.168.t:0 "Pierwszy arbitraż lublański"
- news.168.d:0 "Po utracie Słowenii w Jugosławii silniej uwydatniły się podziały etniczne, a władza centralna słabnie z każdym dniem. \n\nDziś niemieckie ministerstwo spraw zagranicznych ogłosiło plan ostatecznego naprawienia "błędów traktatu wersalskiego". Traktat podpisany przez najpotężniejszych sąsiadów Jugosławii zakłada podział większości jej terytorium pomiędzy kraje zaprzyjaźnione z Niemcami.\n\nDyplomaci [YUG.GetAdjective] nawet nie widzieli tego traktatu przed jego ratyfikacją, ale rząd, na czele którego stoi [YUG.GetLeader], nie może wiele zrobić, gdy tak dużo krajów chce odebrać jugosłowiańskie ziemie słabnącej władzy centralnej."
+ news.168.d:0 "Po utracie Słowenii w Jugosławii silniej uwydatniły się podziały etniczne, a władza centralna słabnie z każdym dniem. \n\nDziś niemieckie ministerstwo spraw zagranicznych ogłosiło plan ostatecznego naprawienia "błędów traktatu wersalskiego". Traktat podpisany przez najpotężniejszych sąsiadów Jugosławii zakłada podział większości jej terytorium pomiędzy kraje zaprzyjaźnione z Niemcami.\n\nDyplomaci [YUG.GetAdjective] nawet nie widzieli tego traktatu przed jego ratyfikacją, ale rząd, na czele którego stoi [YUG.GetLeader], nie może wiele zrobić, gdy tak dużo krajów chce odebrać jugosłowiańskie ziemie słabnącej władzy centralnej." # [LocEditor:AwaitingBatchUpdate]
  news.168.a:0 "Tak powstaje Nowy Porządek."
  news.168.b:0 "Dziś prysło marzenie."
  news.168.c:0 "To nic dobrego."
@@ -1283,18 +1283,18 @@
  news.168.i:0 "Siła Włoch została dostrzeżona."
  news.168.j:0 "Niemcy powinny uważać."
  news.169.t:0 "Los Jugosławii"
- news.169.d_annex_YUG:0 "Niedawna utrata terytoriów rozbudziła w Jugosławii konflikty etniczne i spowodowała osłabienie władzy centralnej. Niemcy weszły w powstałą przestrzeń i ogłosiły ustanowienie protektoratu nad tym, co zostało z Jugosławii."
- news.169.d_puppet_CRO_annex_YUG:0 "Niedawna utrata terytoriów rozbudziła w Jugosławii konflikty etniczne i spowodowała osłabienie władzy centralnej. Niemcy stworzyły "niepodległe" państwo chorwackie i zaanektowały resztę kraju."
- news.169.d_puppet_CRO_YUG:0 "Niedawna utrata terytoriów rozbudziła w Jugosławii konflikty etniczne i spowodowała osłabienie władzy centralnej. Niemcy postanowiły podzielić resztę kraju pomiędzy nadzorowane przez nich państwa: serbskie i chorwackie."
+ news.169.d_annex_YUG:0 "Niedawna utrata terytoriów rozbudziła w Jugosławii konflikty etniczne i spowodowała osłabienie władzy centralnej. Niemcy weszły w powstałą przestrzeń i ogłosiły ustanowienie protektoratu nad tym, co zostało z Jugosławii." # [LocEditor:AwaitingBatchUpdate]
+ news.169.d_puppet_CRO_annex_YUG:0 "Niedawna utrata terytoriów rozbudziła w Jugosławii konflikty etniczne i spowodowała osłabienie władzy centralnej. Niemcy stworzyły "niepodległe" państwo chorwackie i zaanektowały resztę kraju." # [LocEditor:AwaitingBatchUpdate]
+ news.169.d_puppet_CRO_YUG:0 "Niedawna utrata terytoriów rozbudziła w Jugosławii konflikty etniczne i spowodowała osłabienie władzy centralnej. Niemcy postanowiły podzielić resztę kraju pomiędzy nadzorowane przez nich państwa: serbskie i chorwackie." # [LocEditor:AwaitingBatchUpdate]
  news.169.a:0 "Niemcy pokazują Europie swoją potęgę."
  news.169.b:0 "Stanęliśmy po właściwej stronie."
  news.169.c:0 "Powiało grozą."
  news.169.e:0 "Pokój jest zagrożony."
  news.170.t:0 "Drugi arbitraż lublański"
- news.170.d_BUL:0 "Niemcy, twierdząc, że pragną zapewnić pokój na Bałkanach, zażądały od greckiego rządu oddania im terytorium Bułgarii. [GRE.GetName] protestuje, ale siła niemieckich wpływów na Bałkanach nie daje wielkiego wyboru. Jedynym sposobem uniknięcia konfrontacji [GRE.GetName] - [GER.GetName] jest pozwolenie Niemcom na kształtowanie własnej polityki terytorialnej."
- news.170.d_ITA:0 "Niemcy, twierdząc, że pragną zapewnić pokój na Bałkanach, zażądały od greckiego rządu oddania terytoriów, których domaga się [ITA.GetName]. [GRE.GetName] protestuje, ale siła niemieckich wpływów na Bałkanach nie daje wielkiego wyboru. Jedynym sposobem uniknięcia otwartego sporu, w którym po przeciwnej stronie staną [ITA.GetName] i [GER.GetName], jest pozwolenie Niemcom na kształtowanie własnej polityki terytorialnej."
- news.170.d_ITA_BUL:0 "Niemcy, twierdząc, że pragną zapewnić pokój na Bałkanach, zażądały od greckiego rządu oddania terytorium, co do którego roszczenia mają [BUL.GetName] i [ITA.GetName]. Silne wpływy [GER.GetAdjective] na Bałkanach i groźby ze strony Bułgarii i Włoch sprawiają, że [GRE.GetLeader] musi się zgodzić."
- news.170.d_GER:0 "[GER.GetName], po uzyskaniu silnej pozycji na Bałkanach, twierdzą, że kieruje nimi tylko chęć utrzymania pokoju w tym trudnym regionie. Żeby to zrobić, zażądali teraz od Grecji przekazania im części terytorium.\n\nW obliczu uruchomienia niemieckiej machiny wojennej [GRE.GetName] nie ma wyboru i musi spełnić te żądania, chociaż uważa je za nieuzasadnione."
+ news.170.d_BUL:0 "Niemcy, twierdząc, że pragną zapewnić pokój na Bałkanach, zażądały od greckiego rządu oddania im terytorium Bułgarii. [GRE.GetName] protestuje, ale siła niemieckich wpływów na Bałkanach nie daje wielkiego wyboru. Jedynym sposobem uniknięcia konfrontacji [GRE.GetName] - [GER.GetName] jest pozwolenie Niemcom na kształtowanie własnej polityki terytorialnej." # [LocEditor:AwaitingBatchUpdate]
+ news.170.d_ITA:0 "Niemcy, twierdząc, że pragną zapewnić pokój na Bałkanach, zażądały od greckiego rządu oddania terytoriów, których domaga się [ITA.GetName]. [GRE.GetName] protestuje, ale siła niemieckich wpływów na Bałkanach nie daje wielkiego wyboru. Jedynym sposobem uniknięcia otwartego sporu, w którym po przeciwnej stronie staną [ITA.GetName] i [GER.GetName], jest pozwolenie Niemcom na kształtowanie własnej polityki terytorialnej." # [LocEditor:AwaitingBatchUpdate]
+ news.170.d_ITA_BUL:0 "Niemcy, twierdząc, że pragną zapewnić pokój na Bałkanach, zażądały od greckiego rządu oddania terytorium, co do którego roszczenia mają [BUL.GetName] i [ITA.GetName]. Silne wpływy [GER.GetAdjective] na Bałkanach i groźby ze strony Bułgarii i Włoch sprawiają, że [GRE.GetLeader] musi się zgodzić." # [LocEditor:AwaitingBatchUpdate]
+ news.170.d_GER:0 "[GER.GetName], po uzyskaniu silnej pozycji na Bałkanach, twierdzą, że kieruje nimi tylko chęć utrzymania pokoju w tym trudnym regionie. Żeby to zrobić, zażądali teraz od Grecji przekazania im części terytorium.\n\nW obliczu uruchomienia niemieckiej machiny wojennej [GRE.GetName] nie ma wyboru i musi spełnić te żądania, chociaż uważa je za nieuzasadnione." # [LocEditor:AwaitingBatchUpdate]
  news.170.a:0 "Wszystko dla zachowania pokoju."
  news.170.b:0 "Powstajemy."
  news.170.c:0 "Źle to wygląda."
@@ -1637,7 +1637,7 @@
  news.229.a:0 "Trzeba ukrócić niemieckie poczynania!"
  news.229.b:0 "Powinni byli się ratować, gdy mieli taką możliwość."
  news.229.c:0 "Prawdopodobnie doprowadzi to do konfliktu zbrojnego."
- news.230.t:0 "Powstania w Amerykach"
+ news.230.t:0 "Powstania w Amerykach" # [LocEditor:AwaitingBatchUpdate]
  news.230.d:0 "W Ameryce Środkowej i Południowej rewolucjoniści chwycili za broń i powstali w imię ideologii ([USA.GetRulingIdeologyNoun]).\n\nSą dobrze uzbrojeni i zorganizowani, a gdyby głosili inną ideologię, można byłoby z łatwością wyśledzić źródła ich finansowania. Ktokolwiek wspiera te ruchy, bardzo stara się ukryć swoje zaangażowanie.\nOczywiście na świecie jest tylko jedno mocarstwo prowadzące otwarcie politykę zagraniczną wspierającą tę ideologię ([USA.GetRulingIdeologyNoun]) w Amerykach..."
  news.230.a:0 "Doprowadzą nasz kraj do ruiny!"
  news.230.b:0 "Co? To nie my."
@@ -2223,7 +2223,7 @@
  germany.97.a:0 "Zmiażdżymy oba te kraje."
  germany.98.t:0 "Los Jugosławii"
  germany.98_tt:0 "§YJeżeli Jugosławia na to przystanie, efekt będzie następujący:§!\n"
- germany.98.d:0 "Zawsze wiedzieliśmy, że wykrojone z imperium Habsburgów państwo jugosłowiańskie to sztuczny twór, któremu nie dane jest trwać. Skrywane napięcia etniczne w końcu eksplodowały i państwo się rozpada. Musimy interweniować i skorygować ten stan rzeczy."
+ germany.98.d:0 "Zawsze wiedzieliśmy, że wykrojone z imperium Habsburgów państwo jugosłowiańskie to sztuczny twór, któremu nie dane jest trwać. Skrywane napięcia etniczne w końcu eksplodowały i państwo się rozpada. Musimy interweniować i skorygować ten stan rzeczy." # [LocEditor:AwaitingBatchUpdate]
  germany.98.a:0 "Zaanektujmy całą Jugosławię."
  germany.98.b:0 "Zróbmy z Chorwacji marionetkę. Zaanektujmy resztę."
  germany.98.c:0 "Zróbmy marionetki z Chorwacji i Jugosławii."
@@ -2547,7 +2547,7 @@
  soviet.36_threat_EST:0 "Estonia staje się marionetką ZSRR"
  soviet.36_threat_LAT:0 "Łotwa staje się marionetką ZSRR"
  soviet.37.t:0 "Nowi oficerowie spisują się na medal"
- soviet.37.d:0 "Nowi oficerowie spisują się na medal i nie mają problemów z opanowaniem swoich obowiązków. Wojsko wreszcie jest w rękach ludzi lojalnych, co oznacza, że czystka, za którą odpowiada [Root.GetLeader], przynajmniej częściowo spełniła swoje zadanie. Armia Czerwona odzyskuje dawną sprawność i wkrótce będzie potężniejsza niż kiedykolwiek."
+ soviet.37.d:0 "Nowi oficerowie spisują się na medal i nie mają problemów z opanowaniem swoich obowiązków. Wojsko wreszcie jest w rękach ludzi lojalnych, co oznacza, że czystka, za którą odpowiada [Root.GetLeader], przynajmniej częściowo spełniła swoje zadanie. Armia Czerwona odzyskuje dawną sprawność i wkrótce będzie potężniejsza niż kiedykolwiek." # [LocEditor:AwaitingBatchUpdate]
  soviet.37.a:0 "Doskonale."
  soviet.37.a_tt:0 "Obniżenie kary za §Yczystkę oficerów§!"
  soviet.46.t:0 "Wielka Wojna Ojczyźniana"
@@ -3229,7 +3229,8 @@
  election.10.b:0 ""
  usa.24.title:0 "Czerwony zmierzch"
  news.317.c:0 "To komplikuje nasze plany..."
- ###
+
+ # === eventy modowe ===
  silesia.1.t:0 "Trocha buff"
  silesia.1.d:0 "O chopie zdecyduj czy chcesz ustabilizować nos czy siły ci potrzeba"
  silesia.2.t:0 "Tragedio Matko Boska"
@@ -3237,5 +3238,5 @@
  silesia.3.t:0 "Wybór taktyki niemieckiej"
  silesia.3.d:0 "Lepij czyli opcja gdzie Niemcy będą dożyły do wojny domowej, gorzyj czyli standadowe niemcy hitlerowskie"
  silesia.4.t:0 "Krwawa rewolta w Oberschlesien"
- silesia.4.d:0 "Aktualna władza a raczyj beboki, są darymne, jedna wielko bezkursyjo.  Frele i Karluse, a pośród nich Hanysy łogłosiły strajk, jedna wielka haja. Wszyscy chwycili za flinty, tera to już nie ma wyjścio."
+ silesia.4.d:0 "Aktualna władza a raczyj beboki, są darymne, jedna wielko bezkursyjo.  Frele i Karluse, a pośród nich Hanysy"
  silesia.4.a:0 "Rozpoczyno się krwawo wojna domowo."

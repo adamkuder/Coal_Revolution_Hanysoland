@@ -1,6 +1,6 @@
 ideas = {
 
-	country = {
+country = {
     SIL_Zapierdala_idea = {
 
 			allowed = {
@@ -530,12 +530,15 @@ ideas = {
 	modifier = {
 		send_volunteers_tension = -0.5
 		send_volunteer_size = 5
+		}
 	}
+
 	SIL_sila_zjednoczenia = {
 	name = SIL_sila_zjednoczenia
 	picture = idea_generic_oppression
 	modifier = {
 		non_core_manpower = 0.1
+		}
 	}
 	SIL_Gotowi_na_wojne_z_ZSSR= {
 		name = SIL_Gotowi_na_wojne_z_ZSSR
@@ -543,10 +546,7 @@ ideas = {
 		modifier = {
 			supply_consumption_factor = 0.2
 		}
-	}
-}
-	
-	
+	}	
 }
 #####################################
 #####################################
@@ -599,6 +599,7 @@ political_advisor = {
 
 	}
 }
+
 #################################
 #################################
 theorist = {
