@@ -7,4 +7,4 @@ tags={
 }
 name="Coal_Revolution_Hanysoland"
 picture="Silesia.png"
-supported_version="1.10.1"
+supported_version="1.10.3"

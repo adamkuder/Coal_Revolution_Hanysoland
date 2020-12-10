@@ -3209,3 +3209,7 @@
  SILPOL_communism:0 "Czerwony uklad Slasko-Polski"
  SILPOL_democratic:0 "Republika Slasko-Polska"
  SILPOL_fascism:0 "Imperium Slasko-Polskie"
+ SILMEX_neutrality:0 "Unia Slasko-Meksykańska"
+ SILMEX_communism:0 "Czerwony uklad Slasko-Meksykańska"
+ SILMEX_democratic:0 "Republika Slasko-Meksykańska"
+ SILMEX_fascism:0 "Imperium Slasko-Meksykańske"
