@@ -1343,6 +1343,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = Koniec_Zwiazku_radzieckiego
 		completion_reward = { 
+			country_event = { id = silesia.28 }
 		}
 	}
 	focus = {
@@ -2542,7 +2543,7 @@ focus_tree = {
 		}
 		relative_position_id = Tez_chcemy_byc_wielcy
 		x = 2
-		y = 1
+		y = 2
 		completion_reward = {
 			add_ideas = Sil_Target_Fra
 		}
@@ -2556,7 +2557,7 @@ focus_tree = {
 		}
 		relative_position_id = Tez_chcemy_byc_wielcy
 		x = -2
-		y = 1
+		y = 2
 		completion_reward = {
 			add_ideas = Sil_Target_Usa
 		}
@@ -2576,11 +2577,25 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = Szkockie_bydloki
+		icon = GFX_focus_attack_britain
+		cost = 12.00
+		prerequisite = {
+			focus = VSENG
+		}
+		relative_position_id = VSENG
+		x = 0
+		y = 1
+		completion_reward = {
+			country_event = { id = silesia.27 }
+		}
+	}
+	focus = {
 		id = Imperium_Slaskie
 		icon = GFX_focus_attack_britain
 		cost = 20.00
 		prerequisite = {
-			focus = VSENG
+			focus = Szkockie_bydloki
 			focus = VSFRA
 			focus = VSUSA
 		}
@@ -2588,7 +2603,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		completion_reward = {
-			#dss
+			add_ideas = SIL_Imperium
 		}
 	}
 	

@@ -1048,6 +1048,35 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = Silesia.27
+	title = Silesia.27.t
+	desc = Silesia.27.d	
+	is_triggered_only = yes
+	option = {
+		name = silesia.27.a
+		ai_chance = { factor = 90 }
+		SCO = {
+			transfer_state = 121
+			transfer_state = 133
+			transfer_state = 120
+			transfer_state = 136
+		}
+		SIL = {
+			puppet = SCO
+		}
+		SCO ={
+			Load_oob = SIL_SCO_FWAR
+		}
+		ENG = {
+		declare_war_on = {
+				target = SCO
+				type = take_state_focus
+				generator = { 121  133 120 136 }
+			}
+		}
+	}
+}
 # Old events 
 #country_event = {
 #	id = silesia.1
