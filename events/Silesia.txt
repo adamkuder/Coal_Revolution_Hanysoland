@@ -1077,6 +1077,67 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = Silesia.28
+	title = Silesia.28.t
+	desc = Silesia.28.d	
+	is_triggered_only = yes
+	option = {
+		name = silesia.28.a
+		ai_chance = { factor = 90 }
+		SYB = {
+			transfer_state = 564
+			add_state_core = 564
+			transfer_state = 566
+			add_state_core = 566
+			transfer_state = 567
+			add_state_core = 567
+			transfer_state = 568
+			add_state_core = 568
+			transfer_state = 576
+			add_state_core = 576
+			transfer_state = 575
+			add_state_core = 575
+			transfer_state = 578
+			add_state_core = 578
+			transfer_state = 577
+			add_state_core = 577
+			transfer_state = 570
+			add_state_core = 570
+			transfer_state = 569
+			add_state_core = 569
+			transfer_state = 40
+			add_state_core = 40
+			transfer_state = 654
+			add_state_core = 654
+			transfer_state = 588
+			add_state_core = 588
+			transfer_state = 565
+			add_state_core = 565
+			transfer_state = 516
+			add_state_core = 516
+			add_state_core = 571
+			add_state_core = 403
+			add_state_core = 572
+			add_state_core = 583
+			add_state_core = 404
+			add_state_core = 590
+		}
+		SIL = {
+			puppet = SYB
+		}
+		SYB ={
+			Load_oob = SIL_SCO_FWAR
+		}
+		SOV = {
+		declare_war_on = {
+				target = SYB
+				type = take_state_focus
+				generator = { 121  133 120 136 }
+			}
+		}
+	}
+}
 # Old events 
 #country_event = {
 #	id = silesia.1

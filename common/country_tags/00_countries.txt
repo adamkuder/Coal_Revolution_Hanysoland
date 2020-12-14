@@ -207,3 +207,4 @@ KUR = "countries/Kurdistan.txt"
 TRA = "countries/Transylvania.txt"
 ##
 SIL = "countries/Silesia.txt"
+SYB = "countries/Syberia.txt"

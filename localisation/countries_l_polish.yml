@@ -3213,3 +3213,7 @@
  SILMEX_communism:0 "Czerwony uklad Slasko-Meksykańska"
  SILMEX_democratic:0 "Republika Slasko-Meksykańska"
  SILMEX_fascism:0 "Imperium Slasko-Meksykańske"
+ SYB_fascism:0 "Imperium Syberii"
+ SYB_democratic:0 "Syberia"
+ SYB_neutrality:0 "Syberia"
+ SYB_communism:0 "Socialistyczna Republika Syberii"
